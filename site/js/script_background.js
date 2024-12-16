@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	canvas.height = window.innerHeight;
 
 	let particlesArray = [];
-	const numberOfParticles = 120; // Reduzido em 20%
+	const numberOfParticles = 90; // Reduzir
 
 	const mouse = {
 		x: null,
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	function init() {
 		particlesArray = [];
 		for (let i = 0; i < numberOfParticles; i++) {
-			const size = Math.random() * 3 + 1; // Ajustar o tamanho das esferas
+			const size = Math.random() * 2 + 1; // Ajustar o tamanho das esferas
 			const x = Math.random() * (canvas.width - size * 2);
 			const y = Math.random() * (canvas.height - size * 2);
 			const directionX = Math.random() * 2 - 1;
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			for (let b = a; b < particlesArray.length; b++) {
 				const distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) +
 					((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
-				if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+				if (distance < (canvas.width / 5) * (canvas.height / 5)) {
 					ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
 					ctx.lineWidth = 1;
 					ctx.beginPath();
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	window.addEventListener('resize', function () {
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
-		mouse.radius = (canvas.height / 80) * (canvas.width / 80);
+		mouse.radius = (canvas.height / 50) * (canvas.width / 50);
 		init();
 	});
 
