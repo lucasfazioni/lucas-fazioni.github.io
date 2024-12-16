@@ -1,222 +1,118 @@
-const STAR_COLOR = '#fff';
-const STAR_SIZE = 3;
-const STAR_MIN_SCALE = 0.2;
-const OVERFLOW_THRESHOLD = 50;
-const STAR_COUNT = (window.innerWidth + window.innerHeight) / 8;
+document.addEventListener('DOMContentLoaded', function () {
+	const canvas = document.getElementById('particles-js');
+	const ctx = canvas.getContext('2d');
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
 
-const canvas = document.querySelector('canvas'),
-	context = canvas.getContext('2d');
+	let particlesArray = [];
+	const numberOfParticles = 120; // Reduzido em 20%
 
-let scale = 1, // device pixel ratio
-	width,
-	height;
+	const mouse = {
+		x: null,
+		y: null,
+		radius: 150 // Raio de interação do mouse
+	};
 
-let stars = [];
-
-let pointerX,
-	pointerY;
-
-let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.0005 };
-
-let touchInput = false;
-
-generate();
-resize();
-step();
-
-window.onresize = resize;
-document.onmousemove = onMouseMove; // Alterado de canvas para document
-document.ontouchmove = onTouchMove; // Alterado de canvas para document
-document.ontouchend = onMouseLeave;
-document.onmouseleave = onMouseLeave;
-
-function generate() {
-
-	for (let i = 0; i < STAR_COUNT; i++) {
-		stars.push({
-			x: 0,
-			y: 0,
-			z: STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE)
-		});
-	}
-
-}
-
-function placeStar(star) {
-
-	star.x = Math.random() * width;
-	star.y = Math.random() * height;
-
-}
-
-function recycleStar(star) {
-
-	let direction = 'z';
-
-	let vx = Math.abs(velocity.x),
-		vy = Math.abs(velocity.y);
-
-	if (vx > 1 || vy > 1) {
-		let axis;
-
-		if (vx > vy) {
-			axis = Math.random() < vx / (vx + vy) ? 'h' : 'v';
-		}
-		else {
-			axis = Math.random() < vy / (vx + vy) ? 'v' : 'h';
+	class Particle {
+		constructor(x, y, directionX, directionY, size, color) {
+			this.x = x;
+			this.y = y;
+			this.directionX = directionX;
+			this.directionY = directionY;
+			this.size = size;
+			this.color = color;
 		}
 
-		if (axis === 'h') {
-			direction = velocity.x > 0 ? 'l' : 'r';
+		draw() {
+			ctx.beginPath();
+			ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+			ctx.fillStyle = this.color;
+			ctx.fill();
 		}
-		else {
-			direction = velocity.y > 0 ? 't' : 'b';
+
+		update() {
+			if (this.x > canvas.width || this.x < 0) {
+				this.directionX = -this.directionX;
+			}
+			if (this.y > canvas.height || this.y < 0) {
+				this.directionY = -this.directionY;
+			}
+			this.x += this.directionX;
+			this.y += this.directionY;
+
+			this.draw();
 		}
 	}
 
-	star.z = STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE);
+	function init() {
+		particlesArray = [];
+		for (let i = 0; i < numberOfParticles; i++) {
+			const size = Math.random() * 3 + 1; // Ajustar o tamanho das esferas
+			const x = Math.random() * (canvas.width - size * 2);
+			const y = Math.random() * (canvas.height - size * 2);
+			const directionX = Math.random() * 2 - 1;
+			const directionY = Math.random() * 2 - 1;
+			const color = 'rgba(255, 255, 255, 0.8)';
 
-	if (direction === 'z') {
-		star.z = 0.1;
-		star.x = Math.random() * width;
-		star.y = Math.random() * height;
-	}
-	else if (direction === 'l') {
-		star.x = -OVERFLOW_THRESHOLD;
-		star.y = height * Math.random();
-	}
-	else if (direction === 'r') {
-		star.x = width + OVERFLOW_THRESHOLD;
-		star.y = height * Math.random();
-	}
-	else if (direction === 't') {
-		star.x = width * Math.random();
-		star.y = -OVERFLOW_THRESHOLD;
-	}
-	else if (direction === 'b') {
-		star.x = width * Math.random();
-		star.y = height + OVERFLOW_THRESHOLD;
-	}
-
-}
-
-function resize() {
-
-	scale = window.devicePixelRatio || 1;
-
-	width = window.innerWidth * scale;
-	height = window.innerHeight * scale;
-
-	canvas.width = width;
-	canvas.height = height;
-
-	stars.forEach(placeStar);
-
-}
-
-function step() {
-
-	context.clearRect(0, 0, width, height);
-
-	update();
-	render();
-
-	requestAnimationFrame(step);
-
-}
-
-function update() {
-
-	velocity.tx *= 0.86;
-	velocity.ty *= 0.86;
-
-	velocity.x += (velocity.tx - velocity.x) * 0.8;
-	velocity.y += (velocity.ty - velocity.y) * 0.8;
-
-	stars.forEach((star) => {
-
-		star.x += velocity.x * star.z;
-		star.y += velocity.y * star.z;
-
-		star.x += (star.x - width / 2) * velocity.z * star.z;
-		star.y += (star.y - height / 2) * velocity.z * star.z;
-		star.z += velocity.z;
-
-		// recycle when out of bounds
-		if (star.x < -OVERFLOW_THRESHOLD || star.x > width + OVERFLOW_THRESHOLD || star.y < -OVERFLOW_THRESHOLD || star.y > height + OVERFLOW_THRESHOLD) {
-			recycleStar(star);
+			particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
 		}
+	}
 
+	function connect() {
+		for (let a = 0; a < particlesArray.length; a++) {
+			for (let b = a; b < particlesArray.length; b++) {
+				const distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) +
+					((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+				if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+					ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+					ctx.lineWidth = 1;
+					ctx.beginPath();
+					ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+					ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+					ctx.stroke();
+				}
+			}
+		}
+	}
+
+	function connectMouse() {
+		for (let i = 0; i < particlesArray.length; i++) {
+			const distance = ((mouse.x - particlesArray[i].x) * (mouse.x - particlesArray[i].x)) +
+				((mouse.y - particlesArray[i].y) * (mouse.y - particlesArray[i].y));
+			if (distance < mouse.radius * mouse.radius) {
+				ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+				ctx.lineWidth = 1;
+				ctx.beginPath();
+				ctx.moveTo(mouse.x, mouse.y);
+				ctx.lineTo(particlesArray[i].x, particlesArray[i].y);
+				ctx.stroke();
+			}
+		}
+	}
+
+	function animate() {
+		requestAnimationFrame(animate);
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+		for (let i = 0; i < particlesArray.length; i++) {
+			particlesArray[i].update();
+		}
+		connect();
+		connectMouse();
+	}
+
+	window.addEventListener('mousemove', function (event) {
+		mouse.x = event.x;
+		mouse.y = event.y;
 	});
 
-}
-
-function render() {
-
-	stars.forEach((star) => {
-
-		context.beginPath();
-		context.lineCap = 'round';
-		context.lineWidth = STAR_SIZE * star.z * scale;
-		context.globalAlpha = 0.5 + 0.5 * Math.random();
-		context.strokeStyle = STAR_COLOR;
-
-		context.beginPath();
-		context.moveTo(star.x, star.y);
-
-		var tailX = velocity.x * 1.5,
-			tailY = velocity.y * 1.5;
-
-		// stroke() wont work on an invisible line
-		if (Math.abs(tailX) < 0.1) tailX = 0.5;
-		if (Math.abs(tailY) < 0.1) tailY = 0.5;
-
-		context.lineTo(star.x + tailX, star.y + tailY);
-
-		context.stroke();
-
+	window.addEventListener('resize', function () {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+		mouse.radius = (canvas.height / 80) * (canvas.width / 80);
+		init();
 	});
 
-}
-
-function movePointer(x, y) {
-
-	if (typeof pointerX === 'number' && typeof pointerY === 'number') {
-
-		let ox = x - pointerX,
-			oy = y - pointerY;
-
-		velocity.tx = velocity.tx + (ox / 25 * scale) * (touchInput ? 1 : 1);
-		velocity.ty = velocity.ty + (oy / 25 * scale) * (touchInput ? 1 : 1);
-
-	}
-
-	pointerX = x;
-	pointerY = y;
-
-}
-
-function onMouseMove(event) {
-
-	touchInput = false;
-
-	movePointer(event.clientX, event.clientY);
-
-}
-
-function onTouchMove(event) {
-
-	touchInput = true;
-
-	movePointer(event.touches[0].clientX, event.touches[0].clientY, true);
-
-	event.preventDefault();
-
-}
-
-function onMouseLeave() {
-
-	pointerX = null;
-	pointerY = null;
-
-}
+	init();
+	animate();
+});

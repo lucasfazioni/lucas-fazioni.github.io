@@ -40,11 +40,17 @@
                     src="images/logo-default-398x45.png" alt="" width="199" height="22" /></a>
                 <div class="rd-navbar-block" id="rd-navbar-hidden-1">
                   <div class="rd-navbar-collapse">
-                    <ul class="list-inline-bordered rd-navbar-list">
-                      <li><span class="icon mdi mdi-comment-text-outline"></span><a href="contacts.html">Contact us</a>
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
                       </li>
-                      <li><span class="icon mdi mdi-cellphone-android"></span><a href="tel:#">+55 51 99537-0653</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="our-founder.html">Our Founder</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Typography</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#contact">Contact</a>
+                      </li>
                     </ul>
+
                   </div>
                   <button class="rd-navbar-search-toggle"
                     data-rd-navbar-toggle="#rd-navbar-search-1"><span></span></button>
@@ -66,15 +72,10 @@
                 <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html"><img
                     src="images/logo-default-398x45.png" alt="" width="199" height="22" /></a>
                 <!-- RD Navbar Nav-->
-                <ul class="rd-navbar-nav">
-                  <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                <ul class="list-inline-bordered rd-navbar-list">
+                  <li><span class="icon mdi mdi-comment-text-outline"></span><a href="#contact">Contact us</a>
                   </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="our-founder.html">Our Founder</a>
-                  </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Typography</a>
-                  </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="#contact">Contact</a>
-                  </li>
+                  <li><span class="icon mdi mdi-cellphone-android"></span><a href="tel:#">+55 51 99537-0653</a></li>
                 </ul>
               </div>
             </div>
@@ -84,28 +85,29 @@
     </header>
     <!-- FScreen-->
     <section class="section section-halfscreen bg-image" style="background-image: url(images/header-bg.jpg);">
+      <canvas class="particles-js-canvas-el" id="particles-js"></canvas>
       <div class="section-halfscreen-inner">
-        <div class="section-halfscreen-image wow fadeIn" style="background-image: url(images/screens-1-960x752.jpg);">
-        </div>
+        <!-- <div class="section-halfscreen-image wow fadeIn" style="background-image: url(images/screens-1-960x752.jpg);">
+        </div> -->
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-lg-5">
               <div class="section-halfscreen-content">
                 <div class="wow-outer heading-3">
-                  <h2 class="wow fadeInUp" data-wow-delay=".2s"><span
-                      class="font-weight-bold">Consulting</span><br><span
-                      class="font-weight-bold sumbol text-primary">&</span><span
-                      class="font-weight-light">Planning</span></h2>
+                  <div class="wow-outer p">
+                    <p class="custom-article wow fadeInDown" data-wow-delay=".2s">I am Lucas</p>
+                  </div>
+                  <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="font-weight-bold">Data Scientist</span><br>
+                    <span class="font-weight-bold sumbol text-primary">&</span>
+                    <span class="font-weight-light"></span>Feature Engineer
+                  </h2>
                 </div>
                 <div class="wow-outer p">
                   <p class="custom-article wow fadeInDown" data-wow-delay=".2s">Our company provides a variety of
                     consulting and planning services that help small and medium busineses worldwide.</p>
-                </div><a class="button button-primary button-winona wow fadeIn" href="#">Read More</a>
+                </div>
+                <a class="button button-primary button-winona wow fadeIn" href="#">Read More</a>
               </div>
-              <ul class="breadcrumbs-custom-path">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">Contacts</li>
-              </ul>
             </div>
           </div>
         </div>
