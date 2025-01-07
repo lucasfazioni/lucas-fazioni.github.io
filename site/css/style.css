@@ -6827,8 +6827,17 @@ html:not(.tablet):not(.mobile) .profile-minimal-caption {
 *
 * Layouts
 */
+
+#contact_container {
+	max-width: 200px;
+}
+
 .layout-bordered {
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 27px;
 }
 
 .layout-bordered-item {
@@ -6870,6 +6879,9 @@ html:not(.tablet):not(.mobile) .profile-minimal-caption {
 @media (min-width: 768px) {
 	.layout-bordered {
 		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 27px;
 	}
 
 	.layout-bordered-item {
@@ -6890,12 +6902,13 @@ html:not(.tablet):not(.mobile) .profile-minimal-caption {
 @media (min-width: 768px) {
 	.layout-bordered-item {
 		flex-basis: 33.333%;
-		border-right-width: 1px;
+		border-bottom-width: 1px;
+		padding-bottom: 10%;
 	}
 
-	.layout-bordered-item:first-child {
+	/* .layout-bordered-item:first-child {
 		border-left-width: 1px;
-	}
+	} */
 }
 
 .layout-navbar-demo {
@@ -8420,6 +8433,7 @@ canvas {
 .range {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
 }
 
 .cell-inner {
