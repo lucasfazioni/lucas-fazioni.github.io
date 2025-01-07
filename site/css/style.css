@@ -2030,14 +2030,238 @@ hr {
 
 /*
 *
+* Icons ferramentas
+*/
+
+/* python */
+.logo-svg-python .pil0,
+.logo-svg-python .pil1 {
+	fill: rgba(128, 128, 128, 0.55);
+	transition: pill 0.3s ease;
+}
+
+.logo-svg-python:hover .pil0 {
+	fill: #366994;
+}
+
+.logo-svg-python:hover .pil1 {
+	fill: #FFC331;
+}
+
+/* spark */
+.logo-svg-spark .sil0,
+.logo-svg-spark .sil1 {
+	fill: rgba(128, 128, 128, 0.55);
+	transition: sill 0.3s ease;
+}
+
+.logo-svg-spark:hover .sil1 {
+	fill: #3C3A3E;
+}
+
+.logo-svg-spark:hover .sil0 {
+	fill: #E25A1C;
+}
+
+/* R */
+.logo-svg-R .Ril0,
+.logo-svg-R .Ril1 {
+	fill: rgba(128, 128, 128, 0.55);
+	transition: Rill 0.3s ease;
+}
+
+.logo-svg-R:hover .Ril1 {
+	fill: #84838B;
+}
+
+.logo-svg-R:hover .Ril0 {
+	fill: #165CAA;
+}
+
+/* Databricks */
+.logo-svg-D .Dil0,
+.logo-svg-D .Dil1 {
+	fill: rgba(128, 128, 128, 0.55);
+	transition: Dill 0.3s ease;
+}
+
+.logo-svg-D:hover .Dil1 {
+	fill: #FF3621;
+
+}
+
+.logo-svg-D:hover .Dil0 {
+	fill: #1B3139;
+}
+
+/* AWS */
+.logo-svg-A .Ail0,
+.logo-svg-A .Ail1 {
+	fill: rgba(128, 128, 128, 0.55);
+	transition: Aill 0.3s ease;
+}
+
+.logo-svg-A:hover .Ail1 {
+	fill: #FF9900;
+
+}
+
+.logo-svg-A:hover .Ail0 {
+	fill: #252F3E;
+}
+
+/* Tableau */
+.logo-svg-T .Til0,
+.logo-svg-T .Til1,
+.logo-svg-T .Til2,
+.logo-svg-T .Til3,
+.logo-svg-T .Til4,
+.logo-svg-T .Til5,
+.logo-svg-T .Til6 {
+	fill: rgba(128, 128, 128, 0.55);
+	transition: Till 0.3s ease;
+}
+
+.logo-svg-T:hover .Til6 {
+	fill: #1F447E;
+}
+
+.logo-svg-T:hover .Til2 {
+	fill: #59879B;
+}
+
+.logo-svg-T:hover .Til4 {
+	fill: #5B6591;
+}
+
+.logo-svg-T:hover .Til0 {
+	fill: #7099A6;
+}
+
+.logo-svg-T:hover .Til5 {
+	fill: #C72035;
+}
+
+.logo-svg-T:hover .Til3 {
+	fill: #E8762C;
+}
+
+.logo-svg-T:hover .Til1 {
+	fill: #EB912C;
+}
+
+/* PBI */
+.logo-svg-P .Pil0 {
+	fill: rgba(128, 128, 128, 0.55);
+	transition: Pill 0.3s ease;
+}
+
+.box-creative:hover .logo-svg-P:hover .Pil0 {
+	fill: #F2C811;
+
+}
+
+
+/*
+*
+* Container Skills
+*/
+
+#skills_ajustes {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	gap: 13px;
+}
+
+.skill-item {
+	text-align: center;
+	background-color: #dddddd;
+	padding: 27px;
+	border-radius: 10px;
+	border: 2px solid #dddddd;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s;
+}
+
+.skill-item:hover {
+	background-color: #b1bcf3;
+	border: 2px solid rgb(162 165 219);
+}
+
+.skill-inner {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.icon-box {
+	padding: 10px;
+	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.icon-box p:hover {
+	font-weight: 600;
+}
+
+.icon-box img {
+	width: 53px;
+	height: 50px;
+	padding-bottom: 10px;
+	filter: grayscale(100%) opacity(0.70);
+	transition: filter 0.5s;
+}
+
+.skill-item:hover .icon-box img {
+	filter: none;
+	transform: scale(1.1);
+	transition: .4s;
+}
+
+
+.number {
+	position: absolute;
+	bottom: -28px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: rgba(128, 128, 128, 0.55);
+	padding: 5px 10px;
+	font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.skill-item:hover .number {
+	color: #28334f;
+}
+
+#skill-card-text {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	color: #28334f;
+	font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 16px;
+	margin-top: 15px;
+}
+
+#skill-card-text:hover {
+	font-weight: 600;
+}
+
+/*
+*
 * Buttons
 */
 .button {
 	position: relative;
 	overflow: hidden;
 	display: inline-block;
-	padding: 10px 5%;
-	margin: 0.5%;
+	padding: 15px 39px;
 	font-size: 14px;
 	line-height: 1.25;
 	border: 1px solid;
