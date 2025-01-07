@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*
-* Trunk version 2.0.0
+* Base site
 */
 /** @group Base */
 a:focus,
@@ -113,6 +113,14 @@ body {
 		font-size: 16px;
 		line-height: 1.5;
 	}
+}
+
+#title-text {
+	font-style: bold;
+	font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	background: linear-gradient(to right, #071a4b, #a0b6ef);
+	-webkit-background-clip: text;
+	color: transparent;
 }
 
 h1,
@@ -8714,6 +8722,10 @@ canvas {
 */
 .bg-gray-100 {
 	background-color: #f5f6fa;
+}
+
+.bg-gray-new {
+	background-color: #3c45776c;
 }
 
 /**
