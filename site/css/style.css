@@ -121,6 +121,7 @@ body {
 	background: linear-gradient(to right, #071a4b, #a0b6ef);
 	-webkit-background-clip: text;
 	color: transparent;
+	margin-bottom: 2%;
 }
 
 h1,
@@ -5527,6 +5528,65 @@ html:not(.tablet):not(.mobile) .thumbnail-indigo:hover .thumbnail-indigo-caption
 		font-size: 15px;
 	}
 }
+
+/*
+*
+* Experience e education
+*/
+
+.container_experience {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 20px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.column {
+	flex: 1;
+	min-width: 300px;
+	margin: 10px;
+}
+
+.header {
+	font-size: 24px;
+	color: #a78bfa;
+	margin-bottom: 20px;
+}
+
+.entry {
+	background-color: #2d2d2d;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	transition: transform 0.3s, background-color 0.3s;
+}
+
+.entry:hover {
+	transform: translateY(-5px);
+	background-color: #4a4a4a;
+}
+
+.entry h3 {
+	margin: 0;
+	font-size: 18px;
+	color: #fff;
+}
+
+.entry p {
+	margin: 5px 0 0;
+	font-size: 14px;
+	color: #ccc;
+}
+
+@media (max-width: 768px) {
+	.container_experience {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
 
 /*
 *
