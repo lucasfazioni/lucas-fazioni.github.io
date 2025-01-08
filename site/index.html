@@ -8,7 +8,7 @@
     content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
-  <link rel="icon" href="images/IC.svg" type="image/x-icon">
+  <link rel="icon" href="images/icon.svg" type="image/x-icon">
   <!-- Stylesheets-->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/fonts.css">
@@ -18,8 +18,8 @@
 
 <body>
   <div class="page">
+    <!-- Menu-->
     <header class="section page-header" style="position: relative">
-      <!-- RD Navbar-->
       <div class="rd-navbar-wrap rd-navbar-absolute">
         <nav class="rd-navbar rd-navbar-thin" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
           data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
@@ -33,11 +33,9 @@
             <div class="rd-navbar-main">
               <!-- RD Navbar Panel-->
               <div class="rd-navbar-panel">
-                <!-- RD Navbar Toggle-->
-                <button class="rd-navbar-toggle"
-                  data-rd-navbar-toggle="#rd-navbar-nav-wrap-1, #rd-navbar-hidden-1"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html"><img
-                    src="images/logo-default-398x45.png" alt="" width="199" height="22" /></a>
+                <!-- RD Navbar Brand-->
+                <a class="rd-navbar-brand" href="index.html">
+                  <img src="images/logo-default-398x45.png" alt="" width="199" height="22" /></a>
                 <div class="rd-navbar-block" id="rd-navbar-hidden-1">
                   <div class="rd-navbar-collapse">
                     <ul class="rd-navbar-nav">
@@ -54,22 +52,18 @@
                   </div>
                 </div>
               </div>
-              <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html"><img
-                    src="images/logo-default-398x45.png" alt="" width="199" height="22" /></a>
-                <!-- RD Navbar Nav-->
-                <ul class="list-inline-bordered rd-navbar-list">
-                  <li><span class="icon mdi mdi-comment-text-outline"></span><a href="#contact">Contact us</a>
-                  </li>
-                  <li><span class="icon mdi mdi-cellphone-android"></span><a href="tel:#">+55 51 99537-0653</a></li>
-                </ul>
+              <div class="switch">
+                <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                <label for="language-toggle"></label>
+                <span class="on">BR</span>
+                <span class="off">EN</span>
               </div>
             </div>
           </div>
         </nav>
       </div>
     </header>
-    <!-- FScreen-->
+    <!-- Apresentation banner-->
     <section class="section section-halfscreen bg-image" style="background-image: url(images/header-bg.jpg);">
       <canvas class="particles-js-canvas-el" id="particles-js"></canvas>
       <div class="section-halfscreen-inner">
@@ -198,21 +192,31 @@
         </div>
       </div>
     </section>
-    <!-- CTA Thin-->
+    <!-- Card apresentation-->
     <section class="section section-xs bg-primary-darken text-center">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-sm-10 col-md-12">
             <div class="box-cta-thin">
               <h4 class="title wow-outer"><span class="wow slideInRight">Helping Business Owners Worldwide</span></h4>
-              <div class="wow-outer button-outer"><a class="button button-white-outline button-winona wow slideInLeft"
-                  href="contacts.html">Get in Touch</a></div>
+              <div class="wow-outer button-outer">
+                <a class="apresentacao__links__botao button button-white-outline button-winona wow slideInLeft" href="#"
+                  style="padding: 2.7%;">
+                  <img id='id_icon_ajuste' src="images/download_cv_other.svg" alt="" class="icone">
+                  <img id='id_icon_ajuste' src="images/download_cv-hover.svg" alt="" class="icone-hover"></a>
+              </div>
+              <div class="wow-outer button-outer">
+                <a class="apresentacao__links__botao button button-white-outline button-winona wow slideInLeft"
+                  href="https://github.com/lucasfazioni" target="_blank" style="padding: 2.7%;">
+                  <img id='id_icon_ajuste' src="images/git.svg" alt="" class="icone">
+                  <img id='id_icon_ajuste' src="images/git-hover.svg" alt="" class="icone-hover"></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Services-->
+    <!-- Skills-->
     <section class="section section-lg bg-gray-100 text-center">
       <div class="container" style="justify-items: center;">
         <h3 class="wow-outer"><span id='title-text' class="wow slideInUp">My Skills</span></h3>
@@ -315,7 +319,7 @@
           </div>
         </div>
     </section>
-    <!-- Recent News-->
+    <!-- Posts e Projects-->
     <section class="section section-lg text-center">
       <div class="container">
         <h3 class="wow-outer"><span id='title-text' class="wow slideInDown">Recent News</span></h3>
@@ -357,7 +361,7 @@
             class="button button-dark-outline button-winona wow slideInUp" href="#">View all Blog posts</a></div>
       </div>
     </section>
-    <!-- A Few Words About Us-->
+    <!-- Experience e Education-->
     <section class="section bg-gray-new">
       <div class="container_experience">
         <div class="column">
@@ -408,7 +412,7 @@
         </div>
       </div>
     </section>
-    <!-- Map & contacts-->
+    <!-- Contacts-->
     <section class="section bg-gray-100">
       <div class="range justify-content-xl-between">
         <div class="cell-xl-6 align-self-center container">
@@ -416,7 +420,6 @@
             <div class="col-lg-9 cell-inner">
               <div class="section-lg">
                 <h3 class="wow-outer"><span id='title-text' class="wow slideInDown">Contact Us</span></h3>
-                <!-- RD Mailform-->
                 <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact"
                   method="post" action="bat/rd-mailform.php">
                   <div class="row row-10">
@@ -461,10 +464,6 @@
                       <button class="button button-primary button-winona wow slideInRight" type="submit">Send
                         Message</button>
                     </div>
-                    <p>or use</p>
-                    <div class="wow-outer"><a
-                        class="button button-primary-outline button-icon button-icon-left button-winona wow slideInLeft"
-                        href="#"><span class="icon text-primary mdi mdi-facebook-messenger"></span>Messenger</a></div>
                   </div>
                 </form>
               </div>

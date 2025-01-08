@@ -5,116 +5,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-            padding: 0;
+        .switch {
+            position: relative;
+            display: inline-block;
+            margin: 0 5px;
         }
 
-        .container_experience {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
+        .switch>span {
+            position: absolute;
+            top: 14px;
+            pointer-events: none;
+            font-family: 'Helvetica', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+            width: 50%;
+            text-align: center;
         }
 
-        .column {
-            flex: 1;
-            min-width: 300px;
-            margin: 10px;
+        input.check-toggle-round-flat:checked~.off {
+            color: #28334f;
         }
 
-        .header {
-            font-size: 24px;
-            color: #a78bfa;
-            margin-bottom: 20px;
-        }
-
-        .entry {
-            background-color: #2d2d2d;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-
-        .entry:hover {
-            transform: translateY(-5px);
-            background-color: #4a4a4a;
-        }
-
-        .entry h3 {
-            margin: 0;
-            font-size: 18px;
+        input.check-toggle-round-flat:checked~.on {
             color: #fff;
         }
 
-        .entry p {
-            margin: 5px 0 0;
-            font-size: 14px;
-            color: #ccc;
+        .switch>span.on {
+            left: 0;
+            padding-left: 2px;
+            color: #28334f;
         }
 
-        @media (max-width: 768px) {
-            .container_experience {
-                flex-direction: column;
-                align-items: center;
-            }
+        .switch>span.off {
+            right: 0;
+            padding-right: 4px;
+            color: #fff;
+        }
+
+        .check-toggle {
+            position: absolute;
+            margin-left: -9999px;
+            visibility: hidden;
+        }
+
+        .check-toggle+label {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        input.check-toggle-round-flat+label {
+            padding: 2px;
+            width: 97px;
+            height: 35px;
+            background-color: #28334f;
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            -ms-border-radius: 60px;
+            -o-border-radius: 60px;
+            border-radius: 60px;
+        }
+
+        input.check-toggle-round-flat+label:before,
+        input.check-toggle-round-flat+label:after {
+            display: block;
+            position: absolute;
+            content: "";
+        }
+
+        input.check-toggle-round-flat+label:after {
+            top: 4px;
+            left: 4px;
+            bottom: 4px;
+            width: 48px;
+            background-color: #fff;
+            -webkit-border-radius: 52px;
+            -moz-border-radius: 52px;
+            -ms-border-radius: 52px;
+            -o-border-radius: 52px;
+            border-radius: 52px;
+            -webkit-transition: margin 0.2s;
+            -moz-transition: margin 0.2s;
+            -o-transition: margin 0.2s;
+            transition: margin 0.2s;
+        }
+
+        input.check-toggle-round-flat:checked+label {}
+
+        input.check-toggle-round-flat:checked+label:after {
+            margin-left: 44px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container_experience">
-        <div class="column">
-            <div class="header">My Experience</div>
-            <div class="entry">
-                <h3>2022 - Present</h3>
-                <h3>Programming Course</h3>
-                <p>Blockdots, London</p>
-            </div>
-            <div class="entry">
-                <h3>2021 - 2022</h3>
-                <h3>CMS Course</h3>
-                <p>Parsons, The New School</p>
-            </div>
-            <div class="entry">
-                <h3>2020 - 2021</h3>
-                <h3>Web Design Course</h3>
-                <p>House of Life, Leeds</p>
-            </div>
-            <div class="entry">
-                <h3>2018 - 2020</h3>
-                <h3>Parsons, The New School</h3>
-                <p>Theme Junction, Bursa</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="header">My Education</div>
-            <div class="entry">
-                <h3>2020 - 2023</h3>
-                <h3>Blockdots</h3>
-                <p>Harvard University</p>
-            </div>
-            <div class="entry">
-                <h3>2016 - 2020</h3>
-                <h3>Parsons, The New School</h3>
-                <p>University of Denmark</p>
-            </div>
-            <div class="entry">
-                <h3>2012 - 2015</h3>
-                <h3>IDEO</h3>
-                <p>University of California</p>
-            </div>
-            <div class="entry">
-                <h3>2010 - 2011</h3>
-                <h3>Parsons, The New School</h3>
-                <p>Parsons, The New School</p>
-            </div>
-        </div>
+    <div class="switch">
+        <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+        <label for="language-toggle"></label>
+        <span class="on">BR</span>
+        <span class="off">EN</span>
     </div>
 </body>
 
