@@ -56,7 +56,7 @@
               <div class="switch">
                 <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
                 <label for="language-toggle"></label>
-                <span class="on">BR</span>
+                <span class="on">PT</span>
                 <span class="off">EN</span>
               </div>
             </div>
@@ -323,44 +323,133 @@
     <!-- Research and Projects-->
     <section id='projetcs_and_posts' class="section section-lg text-center">
       <div class="container">
-        <h3 class="wow-outer"><span id='title-text' class="wow slideInDown">Projects and Research</span></h3>
-        <div class="row row-30">
-          <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
-            <!-- Post Tiny-->
-            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#"><img
-                  src="images/blog-layouts-1-270x184.jpg" alt="" width="270" height="184" /></a>
-              <h5 class="post-tiny-title"><a href="#">Market Research Tips for Business Owners</a></h5>
-              <time class="post-tiny-time" datetime="2017">2 days ago</time>
-            </article>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
-            <!-- Post Tiny-->
-            <article class="post-tiny wow fadeSlideInDown" data-wow-delay=".05s"><a class="post-tiny-media"
-                href="#"><img src="images/blog-layouts-2-270x184.jpg" alt="" width="270" height="184" /></a>
-              <h5 class="post-tiny-title"><a href="#">Managing Your Company Finances</a></h5>
-              <time class="post-tiny-time" datetime="2017">2 days ago</time>
-            </article>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
-            <!-- Post Tiny-->
-            <article class="post-tiny wow fadeSlideInDown" data-wow-delay=".1s"><a class="post-tiny-media" href="#"><img
-                  src="images/blog-layouts-3-270x184.jpg" alt="" width="270" height="184" /></a>
-              <h5 class="post-tiny-title"><a href="#">Efficient Accounting for Your Business</a></h5>
-              <time class="post-tiny-time" datetime="2017">2 days ago</time>
-            </article>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
-            <!-- Post Tiny-->
-            <article class="post-tiny wow fadeSlideInDown" data-wow-delay=".15s"><a class="post-tiny-media"
-                href="#"><img src="images/blog-layouts-4-270x184.jpg" alt="" width="270" height="184" /></a>
-              <h5 class="post-tiny-title"><a href="#">Applying Innovations in Management</a></h5>
-              <time class="post-tiny-time" datetime="2017">2 days ago</time>
-            </article>
+        <div id='ajuste_proj_pesq'>
+          <h3 class="wow-outer"><span id='title-text' class="wow slideInDown">Projects and Research</span></h3>
+          <div class="switch_proj">
+            <input type="radio" id="all" name="toggle" class="check-toggle-proj" checked>
+            <input type="radio" id="proj" name="toggle" class="check-toggle-proj">
+            <input type="radio" id="pesq" name="toggle" class="check-toggle-proj">
+            <div class="slider_proj"></div>
+            <label for="all" class="all">All</label>
+            <label for="proj" class="proj">Project</label>
+            <label for="pesq" class="pesq">Research</label>
           </div>
         </div>
-        <div class="wow-outer button-outer offset-top-2"><a
-            class="button button-dark-outline button-winona wow slideInUp" href="#">View all Blog posts</a></div>
-      </div>
+        <div class="row row-30">
+          <!-- Post 1-->
+          <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#">
+                <div class='card'>
+                  <div class='info'>
+                    <p class='description'><a class="details_info">Description:</a>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
+                      velit porro impedit laudantium accusamus! Id velit.</p>
+                  </div>
+                </div>
+                <h5 class="post-tiny-title"><a href="#">Managing Your Company Finances</a></h5>
+                <time class="post-tiny-time" datetime="2017">2 days ago<a class="tag_proj">Project</a></time>
+            </article>
+          </div>
+          <!-- Post 2-->
+          <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#">
+                <div class='card'>
+                  <div class='info'>
+                    <p class='description'><a class="details_info">Description:</a>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
+                      velit porro impedit laudantium accusamus! Id velit.</p>
+                  </div>
+                </div>
+                <h5 class="post-tiny-title"><a href="#">Managing Your Company Finances</a></h5>
+                <time class="post-tiny-time" datetime="2017">2 days ago<a class="tag_proj">Project</a></time>
+            </article>
+          </div>
+          <!-- Post 3-->
+          <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#">
+                <div class='card'>
+                  <div class='info'>
+                    <p class='description'><a class="details_info">Description:</a>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
+                      velit porro impedit laudantium accusamus! Id velit.</p>
+                  </div>
+                </div>
+                <h5 class="post-tiny-title"><a href="#">Managing Your Company Finances</a></h5>
+                <time class="post-tiny-time" datetime="2017">2 days ago<a class="tag_pesq">Research</a></time>
+            </article>
+          </div>
+          <!-- Post 4-->
+          <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#">
+                <div class='card'>
+                  <div class='info'>
+                    <p class='description'><a class="details_info">Description:</a>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
+                      velit porro impedit laudantium accusamus! Id velit.</p>
+                  </div>
+                </div>
+                <h5 class="post-tiny-title"><a href="#">Managing Your Company Finances</a></h5>
+                <time class="post-tiny-time" datetime="2017">2 days ago<a class="tag_proj">Project</a></time>
+            </article>
+          </div>
+          <!-- Post 5-->
+          <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#">
+                <div class='card'>
+                  <div class='info'>
+                    <p class='description'><a class="details_info">Description:</a>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
+                      velit porro impedit laudantium accusamus! Id velit.</p>
+                  </div>
+                </div>
+                <h5 class="post-tiny-title"><a href="#">Managing Your Company Finances</a></h5>
+                <time class="post-tiny-time" datetime="2017">2 days ago<a class="tag_proj">Project</a></time>
+
+            </article>
+          </div>
+          <!-- Post 6-->
+          <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#">
+                <div class='card'>
+                  <div class='info'>
+                    <p class='description'><a class="details_info">Description:</a>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
+                      velit porro impedit laudantium accusamus! Id velit.</p>
+                  </div>
+                </div>
+                <h5 class="post-tiny-title"><a href="#">Managing Your Company Finances</a></h5>
+                <time class="post-tiny-time" datetime="2017">2 days ago<a class="tag_pesq">Research</a></time>
+
+            </article>
+          </div>
+          <!-- Post 7-->
+          <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#">
+                <div class='card'>
+                  <div class='info'>
+                    <p class='description'><a class="details_info">Description:</a>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
+                      velit porro impedit laudantium accusamus! Id velit.</p>
+                  </div>
+                </div>
+                <h5 class="post-tiny-title"><a href="#">Managing Your Company Finances</a></h5>
+                <time class="post-tiny-time" datetime="2017">2 days ago<a class="tag_pesq">Research</a></time>
+            </article>
+          </div>
+          <!-- Post 8-->
+          <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#">
+                <div class='card'>
+                  <div class='info'>
+                    <p class='description'><a class="details_info">Description:</a>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
+                      velit porro impedit laudantium accusamus! Id velit.</p>
+                  </div>
+                </div>
+                <h5 class="post-tiny-title"><a href="#">Managing Your Company Finances</a></h5>
+                <time class="post-tiny-time" datetime="2017">2 days ago<a class="tag_pesq">Research</a></time>
+            </article>
+          </div>
     </section>
     <!-- Experience e Education-->
     <section class="section bg-gray-new">
@@ -522,8 +611,6 @@
       </div>
     </div>
   </div>
-  <!-- Global Mailform Output-->
-  <div class="snackbars" id="form-output-global"></div>
   <!-- Javascript-->
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
