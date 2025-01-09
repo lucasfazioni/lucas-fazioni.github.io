@@ -4,145 +4,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <style>
-        .card {
-            border-radius: 16px;
-            margin: 0 auto;
-            width: 500px;
-            height: 184px;
-            max-width: 100%;
-            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
-            overflow: hidden;
-            background-size: cover;
-        }
-
-        .info {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            background-color: #9b9b9b76;
-            transform: translateY(100%) translateY(-88px) translateZ(0);
-            transition: transform 0.5s ease-out;
-        }
-
-        .info:before {
-            z-index: -1;
-            display: block;
-            position: absolute;
-            content: " ";
-            width: 100%;
-            height: 184px;
-            overflow: hidden;
-            background-image: url(https://source.unsplash.com/collection/905011/1000x1000);
-            filter: blur(10px);
-            background-size: cover;
-            opacity: 0.25;
-            transform: translateY(-100%) translateY(88px) translateZ(0);
-            transition: transform 0.5s ease-out;
-        }
-
-        .card:hover .info,
-        .card:hover .info:before {
-            transform: translateY(0) translateZ(0);
-        }
-
-        .title {
-            margin: 0;
-            padding: 24px;
-            font-size: 40px;
-            line-height: 1;
-            color: rgba(0, 0, 0, 0.87);
-        }
-
-        .description {
-            margin: 0;
-            padding: 0 24px 24px;
-            font-size: 18px;
-            line-height: 1.5;
-        }
-
-        #grid_proj {
-            display: flex;
-        }
-    </style>
+    <title>Filter Cards</title>
 </head>
+<style>
+    body {
+        background-color: #1a1a1a;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .switch {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 280px;
+        height: 40px;
+        margin: 0 5px;
+        background-color: #28334f;
+        border-radius: 20px;
+        padding: 0 5px;
+    }
+
+    .switch input {
+        display: none;
+    }
+
+    .switch label {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        font-family: 'Helvetica', Arial, sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+        transition: background-color 0.3s, color 0.3s;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider {
+        position: absolute;
+        top: 2px;
+        left: 5px;
+        height: calc(100% - 4px);
+        background-color: #fff;
+        border-radius: 20px;
+        transition: left 0.3s, width 0.3s;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .card {
+        background-color: #333;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 20px;
+        width: 200px;
+        text-align: center;
+    }
+
+    input#all:checked~.slider {
+        left: 5px;
+        width: calc(33.33% - 10px);
+    }
+
+    input#proj:checked~.slider {
+        left: calc(33.33% + 5px);
+        width: calc(33.33% - 10px);
+    }
+
+    input#pesq:checked~.slider {
+        left: calc(66.66% + 5px);
+        width: calc(33.33% - 10px);
+    }
+
+    input#all:checked~label.all,
+    input#proj:checked~label.proj,
+    input#pesq:checked~label.pesq {
+        color: #28334f;
+    }
+
+    label {
+        color: #fff;
+    }
+
+    input:checked~label {
+        color: #fff;
+    }
+</style>
 
 <body>
-    <div id="grid_proj">
-        <div class='card'>
-            <div class='info'>
-                <h1 class='title'>Title</h1>
-                <p class='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
-                    velit
-                    porro impedit laudantium accusamus! Id velit, illum magni rem mollitia blanditiis iste maiores optio
-                    ipsa, est dolorem fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse
-                    corporis,
-                    velit porro impedit laudantium accusamus! Id velit, illum magni rem mollitia blanditiis iste maiores
-                    optio ipsa, est dolorem fugit.</p>
-            </div>
+    <div class="switch">
+        <input type="radio" id="all" name="toggle" class="check-toggle" checked>
+        <input type="radio" id="proj" name="toggle" class="check-toggle">
+        <input type="radio" id="pesq" name="toggle" class="check-toggle">
+        <div class="slider"></div>
+        <label for="all" class="all" data-filter="all">All</label>
+        <label for="proj" class="proj" data-filter="project">Projects</label>
+        <label for="pesq" class="pesq" data-filter="research">Research</label>
+    </div>
+
+    <div class="cards">
+        <div class="card" data-category="project">
+            <h3>Project 1</h3>
+            <p>Details about project 1.</p>
         </div>
-        <div class='card'>
-            <div class='info'>
-                <h1 class='title'>Title</h1>
-                <p class='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
-                    velit
-                    porro impedit laudantium accusamus! Id velit, illum magni rem mollitia blanditiis iste maiores optio
-                    ipsa, est dolorem fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse
-                    corporis,
-                    velit porro impedit laudantium accusamus! Id velit, illum magni rem mollitia blanditiis iste maiores
-                    optio ipsa, est dolorem fugit.</p>
-            </div>
+        <div class="card" data-category="research">
+            <h3>Research 1</h3>
+            <p>Details about research 1.</p>
         </div>
-        <div class='card'>
-            <div class='info'>
-                <h1 class='title'>Title</h1>
-                <p class='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
-                    velit
-                    porro impedit laudantium accusamus! Id velit, illum magni rem mollitia blanditiis iste maiores optio
-                    ipsa, est dolorem fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse
-                    corporis,
-                    velit porro impedit laudantium accusamus! Id velit, illum magni rem mollitia blanditiis iste maiores
-                    optio ipsa, est dolorem fugit.</p>
-            </div>
+        <div class="card" data-category="project">
+            <h3>Project 2</h3>
+            <p>Details about project 2.</p>
         </div>
-        <div class='card'>
-            <div class='info'>
-                <h1 class='title'>Title</h1>
-                <p class='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
-                    velit
-                    porro impedit laudantium accusamus! Id velit, illum magni rem mollitia blanditiis iste maiores optio
-                    ipsa, est dolorem fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse
-                    corporis,
-                    velit porro impedit laudantium accusamus! Id velit, illum magni rem mollitia blanditiis iste maiores
-                    optio ipsa, est dolorem fugit.</p>
-            </div>
-        </div>
-        <div class='card'>
-            <div class='info'>
-                <h1 class='title'>Title</h1>
-                <p class='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
-                    velit
-                    porro impedit laudantium accusamus! Id velit, illum magni rem mollitia blanditiis iste maiores optio
-                    ipsa, est dolorem fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse
-                    corporis,
-                    velit porro impedit laudantium accusamus! Id velit, illum magni rem mollitia blanditiis iste maiores
-                    optio ipsa, est dolorem fugit.</p>
-            </div>
-        </div>
-        <div class='card'>
-            <div class='info'>
-                <h1 class='title'>Title</h1>
-                <p class='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis,
-                    velit
-                    porro impedit laudantium accusamus! Id velit, illum magni rem mollitia blanditiis iste maiores optio
-                    ipsa, est dolorem fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse
-                    corporis,
-                    velit porro impedit laudantium accusamus! Id velit, illum magni rem mollitia blanditiis iste maiores
-                    optio ipsa, est dolorem fugit.</p>
-            </div>
+        <div class="card" data-category="research">
+            <h3>Research 2</h3>
+            <p>Details about research 2.</p>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filters = document.querySelectorAll('.switch label');
+            const cards = document.querySelectorAll('.card');
+
+            filters.forEach(filter => {
+                filter.addEventListener('click', function () {
+                    const filterValue = this.getAttribute('data-filter');
+                    cards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+
+    </script>
 </body>
 
 </html>

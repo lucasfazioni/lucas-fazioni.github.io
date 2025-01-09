@@ -3084,6 +3084,23 @@ textarea.form-input {
 	padding: 0px 6px;
 }
 
+/* botão de expandir */
+
+#show-more-btn {
+	background-color: #28334f;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+	transition: background-color 0.3s;
+}
+
+#show-more-btn:hover {
+	background-color: #1a1a1a;
+}
+
 .post-inline {
 	max-width: 313px;
 }
