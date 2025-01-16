@@ -2345,8 +2345,16 @@ html .button.button-primary-lighten:active {
 	display: flex;
 	align-items: center;
 	flex-direction: row;
+	height: 11%;
 }
 
+#ajuste-btn-about {
+	display: flex;
+	flex-direction: row;
+	gap: 2%;
+	align-items: flex-end;
+
+}
 
 /* Adicionando bloco @media para abreviar o texto do botão */
 @media (max-width: 576px) {
@@ -5452,6 +5460,41 @@ input.check-toggle-round-flat:checked+label {}
 
 input.check-toggle-round-flat:checked+label:after {
 	margin-left: 44px;
+}
+
+/* Adicionando o bloco @media para mover o seletor de idioma */
+@media (max-width: 990px) {
+	.switch {
+		position: fixed;
+		top: 10px;
+		/* Ajustar conforme necessário */
+		right: 90px;
+		/* Ajustar conforme necessário para posicionar ao lado dos três pontinhos */
+		z-index: 9998;
+		/* Colocar em primeiro plano */
+	}
+}
+
+
+/* img logo nav bar */
+
+#id_img_reduce {
+	visibility: hidden;
+	height: 0;
+	margin-left: 2%;
+}
+
+@media (max-width: 630px) {
+	#id_img_reduce {
+		visibility: visible;
+		height: 40px;
+	}
+
+	#id_img_exclude {
+		display: none;
+		visibility: hidden;
+	}
+
 }
 
 /*
