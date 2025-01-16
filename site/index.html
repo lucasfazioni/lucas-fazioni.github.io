@@ -34,7 +34,7 @@
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Brand-->
                 <a class="rd-navbar-brand" href="index.html">
-                  <img src="images/logo-default-398x45.png" alt="" width="199" height="22" /></a>
+                  <img src="images/logo-default-398x45.svg" alt="" width="199" height="22" /></a>
                 <div class="rd-navbar-block" id="rd-navbar-hidden-1">
                   <div class="rd-navbar-collapse">
                     <ul class="rd-navbar-nav">
@@ -84,23 +84,25 @@
                   <p class="custom-article wow fadeInDown" data-wow-delay=".2s">Our company provides a variety of
                     consulting and planning services that help small and medium busineses worldwide.</p>
                 </div>
-                <a class="button button-primary button-winona wow fadeIn" href="#">Download CV <img
-                    style="margin-bottom: 2%; margin-left: 5%;" src="images/download_cv.svg" href="#"></a>
-                <a class="button button-primary button-winona wow fadeIn"
-                  href="https://www.linkedin.com/in/lucas-fazioni/" target="_blank" style="padding: 2.7%;"><img
-                    src="images/linkedin.svg"></a>
-                <a class="button button-primary button-winona wow fadeIn" href="mailto:fazionilucas@gmail.com"
-                  target="_blank" style="padding-top: 2.7%; padding-bottom: 2.7%; padding-left: 2%;
+                <div id="ajuste-btn-about">
+                  <a class="button button-primary button-winona wow fadeIn" href="#" id="btn-download">Download CV <img
+                      style="margin-bottom: 2%; margin-left: 5%;" src="images/download_cv.svg" href="#"></a>
+                  <a class="button button-primary button-winona wow fadeIn"
+                    href="https://www.linkedin.com/in/lucas-fazioni/" target="_blank" style="padding: 2.7%;"><img
+                      src="images/linkedin.svg"></a>
+                  <a class="button button-primary button-winona wow fadeIn" href="mailto:fazionilucas@gmail.com"
+                    target="_blank" style="padding-top: 2.7%; padding-bottom: 2.7%; padding-left: 2%;
                   padding-right: 1.5%;"><img src="images/mail.svg"></a>
-                <a class="button button-primary button-winona wow fadeIn" href="https://github.com/lucasfazioni"
-                  target="_blank" style="padding: 2.7%;"><img src="images/git.svg"></a>
+                  <a class="button button-primary button-winona wow fadeIn" href="https://github.com/lucasfazioni"
+                    target="_blank" style="padding: 2.7%;"><img src="images/git.svg"></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="tabs-horizontal"></div>
+    <!-- <div class="tabs-horizontal"></div> -->
     <!-- Features-->
     <section class="section section-lg bg-gray-100">
       <div class="container">
@@ -547,7 +549,9 @@
                 <time class="post-tiny-time" datetime="2017">2 days ago<a class="tag_pesq">Research</a></time>
             </article>
           </div>
-          <button id="show-more-btn">Show more</button>
+          <div class="upt_btn_show_more">
+            <button id="show-more-btn" class="button button-primary button-winona wow slideInRight">Show more</button>
+          </div>
     </section>
     <!-- Experience e Education-->
     <section class="section bg-gray-new">
@@ -608,20 +612,17 @@
             <div class="col-lg-9 cell-inner">
               <div id="contact" class="section-lg">
                 <h3 class="wow-outer"><span id='title-text' class="wow slideInDown">Contact Me</span></h3>
+                <p class="wow-outer"><span class="text-width-1 wow slideInDown">Since our establishment in 2002, our
+                    team has
+                    achieved a lot. Below are some statistics and interesting facts about our business consulting
+                    company.</span></p>
                 <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact"
-                  method="post" action="bat/rd-mailform.php">
+                  action="https://api.staticforms.xyz/submit" method="post">
                   <div class="row row-10">
                     <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
-                        <label class="form-label-outside" for="contact-first-name">First Name</label>
+                        <label class="form-label-outside" for="contact-first-name">Name</label>
                         <input class="form-input" id="contact-first-name" type="text" name="name"
-                          data-constraints="@Required">
-                      </div>
-                    </div>
-                    <div class="col-md-6 wow-outer">
-                      <div class="form-wrap wow fadeSlideInUp">
-                        <label class="form-label-outside" for="contact-last-name">Last Name</label>
-                        <input class="form-input" id="contact-last-name" type="text" name="name"
                           data-constraints="@Required">
                       </div>
                     </div>
@@ -631,8 +632,6 @@
                         <input class="form-input" id="contact-email" type="email" name="email"
                           data-constraints="@Email @Required">
                       </div>
-                    </div>
-                    <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
                         <label class="form-label-outside" for="contact-phone">Phone</label>
                         <input class="form-input" id="contact-phone" type="text" name="phone"
@@ -648,13 +647,16 @@
                     </div>
                   </div>
                   <div class="group group-middle">
+                    <input type="hidden" name="accessKey" value="60d146b6-afc7-43a2-b23c-068673f88bf5">
+                    <input type="hidden" name="subject" value="Contact me from - Portfólio DS" />
                     <div class="wow-outer">
-                      <button class="button button-primary button-winona wow slideInRight" type="submit">Send
+                      <button class="button button-primary button-winona wow slideInRight" type="submit" value="Submit"
+                        id="show-more-btn2">Send
                         Message</button>
                     </div>
                   </div>
-                </form>
               </div>
+              </form>
             </div>
           </div>
         </div>
@@ -700,8 +702,9 @@
       </div>
     </footer>
   </div>
+  <!-- Barra de loading-->
   <div class="preloader">
-    <div class="preloader-logo"><img src="images/logo-default-398x45.png" alt="" width="199" height="22" />
+    <div class="preloader-logo"><img src="images/logo-default-398x45.svg" alt="" width="199" height="22" />
     </div>
     <div class="preloader-body">
       <div id="loadingProgressG">

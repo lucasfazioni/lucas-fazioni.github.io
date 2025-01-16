@@ -111,56 +111,16 @@
 </style>
 
 <body>
-    <div class="switch">
-        <input type="radio" id="all" name="toggle" class="check-toggle" checked>
-        <input type="radio" id="proj" name="toggle" class="check-toggle">
-        <input type="radio" id="pesq" name="toggle" class="check-toggle">
-        <div class="slider"></div>
-        <label for="all" class="all" data-filter="all">All</label>
-        <label for="proj" class="proj" data-filter="project">Projects</label>
-        <label for="pesq" class="pesq" data-filter="research">Research</label>
-    </div>
+    <form action="https://api.staticforms.xyz/submit" method="post">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="text" name="email" placeholder="Your Email" />
+        <textarea name="message"></textarea>
 
-    <div class="cards">
-        <div class="card" data-category="project">
-            <h3>Project 1</h3>
-            <p>Details about project 1.</p>
-        </div>
-        <div class="card" data-category="research">
-            <h3>Research 1</h3>
-            <p>Details about research 1.</p>
-        </div>
-        <div class="card" data-category="project">
-            <h3>Project 2</h3>
-            <p>Details about project 2.</p>
-        </div>
-        <div class="card" data-category="research">
-            <h3>Research 2</h3>
-            <p>Details about research 2.</p>
-        </div>
-    </div>
+        <input type="hidden" name="accessKey" value="60d146b6-afc7-43a2-b23c-068673f88bf5">
+        <input type="hidden" name="subject" value="Contact me from - Portfólio DS" />
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const filters = document.querySelectorAll('.switch label');
-            const cards = document.querySelectorAll('.card');
-
-            filters.forEach(filter => {
-                filter.addEventListener('click', function () {
-                    const filterValue = this.getAttribute('data-filter');
-                    cards.forEach(card => {
-                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
-
-
-    </script>
+        <input type="submit" value="Submit" />
+    </form>
 </body>
 
 </html>

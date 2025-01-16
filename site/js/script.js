@@ -987,13 +987,14 @@
 	});
 }());
 
-// Selection card project or research + show more cards (8)
+// Selection card project or research + Button Show more
 
 document.addEventListener('DOMContentLoaded', function () {
 	const filters = document.querySelectorAll('.switch_proj label');
 	let visibleCards = 8;
 	const cards = document.querySelectorAll('.cards_filter');
 	const showMoreBtn = document.getElementById('show-more-btn');
+	let currentFilter = 'all';
 
 	function filterCards(filterValue) {
 		let visibleCount = 0;
@@ -1020,36 +1021,19 @@ document.addEventListener('DOMContentLoaded', function () {
 	filters.forEach(filter => {
 		filter.addEventListener('click', function () {
 			const filterValue = this.getAttribute('data-filter');
+			currentFilter = filterValue;
 			visibleCards = 8; // Reset visible cards count when changing filter
 			filterCards(filterValue);
 		});
+	});
+
+	showMoreBtn.addEventListener('click', function () {
+		visibleCards += 8; // Load 8 more cards
+		filterCards(currentFilter);
 	});
 
 	// Inicializa a exibição dos cards para mostrar todos
 	filterCards('all');
 });
 
-// button show more
-
-document.addEventListener('DOMContentLoaded', function () {
-	const showMoreBtn = document.getElementById('show-more-btn');
-	const cards = document.querySelectorAll('.cards_filter');
-	let visibleCards = 8;
-
-	showMoreBtn.addEventListener('click', function () {
-		cards.forEach(card => {
-			card.style.display = 'block';
-		});
-		showMoreBtn.style.display = 'none';
-	});
-
-	// Inicializa a exibição dos cards para mostrar apenas os 8 primeiros
-	cards.forEach((card, index) => {
-		if (index < visibleCards) {
-			card.style.display = 'block';
-		} else {
-			card.style.display = 'none';
-		}
-	});
-});
 
