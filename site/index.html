@@ -40,14 +40,15 @@
                 <div class="rd-navbar-block" id="rd-navbar-hidden-1">
                   <div class="rd-navbar-collapse">
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                      <li class="rd-nav-item active"><a id='trad_menu1' class="rd-nav-link" href="index.html">Home</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#about">About</a>
+                      <li class="rd-nav-item"><a id='trad_menu2' class="rd-nav-link" href="#about">About</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#projetcs_and_posts">Projects and
+                      <li class="rd-nav-item"><a id='trad_menu3' class="rd-nav-link" href="#projetcs_and_posts">Projects
+                          and
                           Research</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#contact">Contact</a>
+                      <li class="rd-nav-item"><a id='trad_menu4' class="rd-nav-link" href="#contact">Contact</a>
                       </li>
                     </ul>
 
@@ -56,8 +57,8 @@
                 <div class="switch">
                   <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
                   <label for="language-toggle"></label>
-                  <span class="on">PT</span>
-                  <span class="off">EN</span>
+                  <span class="on">EN</span>
+                  <span class="off">PT</span>
                 </div>
               </div>
             </div>
@@ -66,41 +67,48 @@
       </div>
     </header>
     <!-- Apresentation banner-->
-    <section class="section section-halfscreen bg-image" style="background-image: url(images/header-bg.jpg);">
+    <section class="section section-halfscreen bg-image"
+      style=" background: radial-gradient(circle, #c9c9c9 8%, rgb(147 147 147) 90%);">
       <canvas class="particles-js-canvas-el" id="particles-js"></canvas>
-      <div class="section-halfscreen-inner">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-lg-5">
-              <div class="section-halfscreen-content">
-                <div class="wow-outer heading-3">
-                  <div class="wow-outer p">
-                    <p class="custom-article wow fadeInDown" data-wow-delay=".2s">I am Lucas</p>
+      <div class="ajuste_painel_img_titule">
+        <div class="section-halfscreen-inner">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6-new col-lg-5">
+                <div class="section-halfscreen-content">
+                  <div class="wow-outer heading-3">
+                    <div class="wow-outer p">
+                      <p class="custom-article wow fadeInDown" data-wow-delay=".2s">I am Lucas</p>
+                    </div>
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="font-weight-bold">Data
+                        Scientist</span><br>
+                      <span class="font-weight-bold sumbol text-primary">&</span>
+                      <span class="font-weight-light"></span>Feature Engineer
+                    </h2>
                   </div>
-                  <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="font-weight-bold">Data Scientist</span><br>
-                    <span class="font-weight-bold sumbol text-primary">&</span>
-                    <span class="font-weight-light"></span>Feature Engineer
-                  </h2>
-                </div>
-                <div class="wow-outer p">
-                  <p class="custom-article wow fadeInDown" data-wow-delay=".2s">Our company provides a variety of
-                    consulting and planning services that help small and medium busineses worldwide.</p>
-                </div>
-                <div id="ajuste-btn-about">
-                  <a class="button button-primary button-winona wow fadeIn" href="#" id="btn-download">Download CV <img
-                      style="margin-bottom: 2%; margin-left: 5%;" src="images/download_cv.svg" href="#"></a>
-                  <a class="button button-primary button-winona wow fadeIn"
-                    href="https://www.linkedin.com/in/lucas-fazioni/" target="_blank" style="padding: 2.7%;"><img
-                      src="images/linkedin.svg"></a>
-                  <a class="button button-primary button-winona wow fadeIn" href="mailto:fazionilucas@gmail.com"
-                    target="_blank" style="padding-top: 2.7%; padding-bottom: 2.7%; padding-left: 2%;
+                  <div class="wow-outer p">
+                    <p class="custom-article wow fadeInDown" data-wow-delay=".2s">Our company provides a variety of
+                      consulting and planning services that help small and medium busineses worldwide.</p>
+                  </div>
+                  <div id="ajuste-btn-about">
+                    <a class="button button-primary button-winona wow fadeIn" href="#" id="btn-download">Download CV
+                      <img style="margin-bottom: 2%; margin-left: 5%;" src="images/download_cv.svg" href="#"></a>
+                    <a class="button button-primary button-winona wow fadeIn"
+                      href="https://www.linkedin.com/in/lucas-fazioni/" target="_blank" style="padding: 2.7%;"><img
+                        src="images/linkedin.svg"></a>
+                    <a class="button button-primary button-winona wow fadeIn" href="mailto:fazionilucas@gmail.com"
+                      target="_blank" style="padding-top: 2.7%; padding-bottom: 2.7%; padding-left: 2%;
                   padding-right: 1.5%;"><img src="images/mail.svg"></a>
-                  <a class="button button-primary button-winona wow fadeIn" href="https://github.com/lucasfazioni"
-                    target="_blank" style="padding: 2.7%;"><img src="images/git.svg"></a>
+                    <a class="button button-primary button-winona wow fadeIn" href="https://github.com/lucasfazioni"
+                      target="_blank" style="padding: 2.7%;"><img src="images/git.svg"></a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="image-container">
+          <img src="images/foto_perfil_3.png" alt="Imagem Rotativa">
         </div>
       </div>
     </section>
@@ -561,47 +569,71 @@
         <div class="column">
           <h3 class="wow-outer"><span id='title-text' class="wow slideInUp">My Experience</span></h3>
           <div class="entry">
-            <h3>2022 - Present</h3>
-            <h3>Programming Course</h3>
-            <p>Blockdots, London</p>
+            <div class="ajuste_experience">
+              <h3>2022 - Present</h3>
+              <h3>Programming Course</h3>
+              <p>Blockdots, London</p>
+            </div>
+            <img src="images/logo_sicredi.svg" alt="">
           </div>
           <div class="entry">
-            <h3>2021 - 2022</h3>
-            <h3>CMS Course</h3>
-            <p>Parsons, The New School</p>
+            <div class="ajuste_experience">
+              <h3>2022 - Present</h3>
+              <h3>Programming Course</h3>
+              <p>Blockdots, London</p>
+            </div>
+            <img src="images/logo_sicredi.svg" alt="">
           </div>
           <div class="entry">
-            <h3>2020 - 2021</h3>
-            <h3>Web Design Course</h3>
-            <p>House of Life, Leeds</p>
+            <div class="ajuste_experience">
+              <h3>2022 - Present</h3>
+              <h3>Programming Course</h3>
+              <p>Blockdots, London</p>
+            </div>
+            <img src="images/logo_getnet.svg" alt="">
           </div>
           <div class="entry">
-            <h3>2018 - 2020</h3>
-            <h3>Parsons, The New School</h3>
-            <p>Theme Junction, Bursa</p>
+            <div class="ajuste_experience">
+              <h3>2022 - Present</h3>
+              <h3>Programming Course</h3>
+              <p>Blockdots, London</p>
+            </div>
+            <img src="images/logo_getnet.svg" alt="">
           </div>
         </div>
         <div class="column">
           <h3 class="wow-outer"><span id='title-text' class="wow slideInUp">My Education</span></h3>
           <div class="entry">
-            <h3>2020 - 2023</h3>
-            <h3>Blockdots</h3>
-            <p>Harvard University</p>
+            <div class="ajuste_experience">
+              <h3>2022 - Present</h3>
+              <h3>Programming Course</h3>
+              <p>Blockdots, London</p>
+            </div>
+            <!-- <img src="images/logo_getnet.svg" alt=""> -->
           </div>
           <div class="entry">
-            <h3>2016 - 2020</h3>
-            <h3>Parsons, The New School</h3>
-            <p>University of Denmark</p>
+            <div class="ajuste_experience">
+              <h3>2022 - Present</h3>
+              <h3>Programming Course</h3>
+              <p>Blockdots, London</p>
+            </div>
+            <!-- <img src="images/logo_getnet.svg" alt=""> -->
           </div>
           <div class="entry">
-            <h3>2012 - 2015</h3>
-            <h3>IDEO</h3>
-            <p>University of California</p>
+            <div class="ajuste_experience">
+              <h3>2022 - Present</h3>
+              <h3>Programming Course</h3>
+              <p>Blockdots, London</p>
+            </div>
+            <!-- <img src="images/logo_getnet.svg" alt=""> -->
           </div>
           <div class="entry">
-            <h3>2010 - 2011</h3>
-            <h3>Parsons, The New School</h3>
-            <p>Parsons, The New School</p>
+            <div class="ajuste_experience">
+              <h3>2022 - Present</h3>
+              <h3>Programming Course</h3>
+              <p>Blockdots, London</p>
+            </div>
+            <!-- <img src="images/logo_getnet.svg" alt=""> -->
           </div>
         </div>
       </div>
@@ -695,7 +727,7 @@
     <!-- footer-->
     <footer class="section footer-minimal bg-primary-darken">
       <div class="container">
-        <div class="footer-minimal-inner"><a class="brand" href="index.html"><img src="images/logo-light-398x45.png"
+        <div class="footer-minimal-inner"><a class="brand" href="index.html"><img src="images/logo-light-398x45.svg"
               alt="" width="199" height="22" /></a>
           <!-- Rights-->
           <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. Design

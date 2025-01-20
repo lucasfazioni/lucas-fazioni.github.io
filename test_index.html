@@ -4,123 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filter Cards</title>
+    <title>Imagem Rotativa</title>
+    <style>
+        body {
+            background: rgb(255, 255, 255);
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 8%, rgba(204, 204, 204, 1) 90%);
+        }
+
+        .image-container {
+            width: 300px;
+            height: 350px;
+            overflow: hidden;
+            transform: rotate(5deg);
+            transition: transform 0.5s ease;
+            border: 2px solid #9c9b9b;
+            border-radius: 35px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-container:hover {
+            transform: rotate(0deg);
+            border: 2px solid #fff;
+            box-shadow: 0px 0px 10px 5px rgb(255 255 255 / 21%);
+            /* Sombra branca */
+        }
+    </style>
 </head>
-<style>
-    body {
-        background-color: #1a1a1a;
-        color: #fff;
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        padding: 20px;
-    }
-
-    .switch {
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 280px;
-        height: 40px;
-        margin: 0 5px;
-        background-color: #28334f;
-        border-radius: 20px;
-        padding: 0 5px;
-    }
-
-    .switch input {
-        display: none;
-    }
-
-    .switch label {
-        position: relative;
-        z-index: 1;
-        height: 100%;
-        line-height: 40px;
-        text-align: center;
-        cursor: pointer;
-        font-family: 'Helvetica', Arial, sans-serif;
-        font-weight: bold;
-        font-size: 12px;
-        text-transform: uppercase;
-        text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
-        transition: background-color 0.3s, color 0.3s;
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .slider {
-        position: absolute;
-        top: 2px;
-        left: 5px;
-        height: calc(100% - 4px);
-        background-color: #fff;
-        border-radius: 20px;
-        transition: left 0.3s, width 0.3s;
-    }
-
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .card {
-        background-color: #333;
-        border-radius: 10px;
-        margin: 10px;
-        padding: 20px;
-        width: 200px;
-        text-align: center;
-    }
-
-    input#all:checked~.slider {
-        left: 5px;
-        width: calc(33.33% - 10px);
-    }
-
-    input#proj:checked~.slider {
-        left: calc(33.33% + 5px);
-        width: calc(33.33% - 10px);
-    }
-
-    input#pesq:checked~.slider {
-        left: calc(66.66% + 5px);
-        width: calc(33.33% - 10px);
-    }
-
-    input#all:checked~label.all,
-    input#proj:checked~label.proj,
-    input#pesq:checked~label.pesq {
-        color: #28334f;
-    }
-
-    label {
-        color: #fff;
-    }
-
-    input:checked~label {
-        color: #fff;
-    }
-</style>
 
 <body>
-    <form action="https://api.staticforms.xyz/submit" method="post">
-        <input type="text" name="name" placeholder="Your Name">
-        <input type="text" name="email" placeholder="Your Email" />
-        <textarea name="message"></textarea>
+    <div class="switch">
+        <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+        <label for="language-toggle"></label>
+        <span class="on">PT</span>
+        <span class="off">EN</span>
+    </div>
 
-        <input type="hidden" name="accessKey" value="60d146b6-afc7-43a2-b23c-068673f88bf5">
-        <input type="hidden" name="subject" value="Contact me from - Portfólio DS" />
+    <h1 id="greeting">Olá, bem-vindo ao nosso site!</h1>
+    <p id="description">Este é um exemplo de site traduzido.</p>
 
-        <input type="submit" value="Submit" />
-    </form>
 </body>
+<script>
+    const translations = {
+        pt: {
+            greeting: "Olá, bem-vindo ao nosso site!",
+            description: "Este é um exemplo de site traduzido.",
+            // Adicione mais traduções aqui
+        },
+        en: {
+            greeting: "Hello, welcome to our website!",
+            description: "This is an example of a translated website.",
+            // Add more translations here
+        }
+    };
+
+    function changeLanguage(lang) {
+        document.getElementById('greeting').textContent = translations[lang].greeting;
+        document.getElementById('description').textContent = translations[lang].description;
+        // Atualize mais elementos aqui
+    }
+
+    document.getElementById('language-toggle').addEventListener('change', function () {
+        if (this.checked) {
+            changeLanguage('en');
+        } else {
+            changeLanguage('pt');
+        }
+    });
+
+
+</script>
 
 </html>

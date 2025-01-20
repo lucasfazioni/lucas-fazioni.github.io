@@ -1036,4 +1036,44 @@ document.addEventListener('DOMContentLoaded', function () {
 	filterCards('all');
 });
 
+// function langage - JS 
+
+const translations = {
+	pt: {
+		// setion 1: menu
+		trad_menu1: "Home",
+		trad_menu2: "About",
+		trad_menu3: "Projects and Research",
+		trad_menu4: "Contact"
+
+
+		// Adicione mais traduções aqui
+	},
+	en: {
+		// setion 1: menu
+		trad_menu1: "Início",
+		trad_menu2: "Sobre mim",
+		trad_menu3: "Projetos e Pesquisas",
+		trad_menu4: "Contato"
+
+
+		// Add more translations here
+	}
+};
+
+function changeLanguage(lang) {
+	document.getElementById('trad_menu1').textContent = translations[lang].trad_menu1;
+	document.getElementById('trad_menu2').textContent = translations[lang].trad_menu2;
+	document.getElementById('trad_menu3').textContent = translations[lang].trad_menu3;
+	document.getElementById('trad_menu4').textContent = translations[lang].trad_menu4;
+	// Atualize mais elementos aqui
+}
+
+document.getElementById('language-toggle').addEventListener('change', function () {
+	if (this.checked) {
+		changeLanguage('en');
+	} else {
+		changeLanguage('pt');
+	}
+});
 
