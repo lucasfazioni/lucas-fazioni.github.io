@@ -1044,29 +1044,94 @@ const translations = {
 		trad_menu1: "Home",
 		trad_menu2: "About",
 		trad_menu3: "Projects and Research",
-		trad_menu4: "Contact"
+		trad_menu4: "Contact",
+
+		// setion 2: banner
+		trad_banner1: "I am Lucas",
+		trad_banner2: "Data Scientist",
+		trad_banner3: "&",
+		trad_banner4: "Feature Engineer",
+		trad_banner5: "I solve complex problems that connect user experience with business security and risk, with solutions focused on Machine Learning and Artificial Intelligence.",
+
+		// setion 3: button download
+		btn_download: "Download CV",
+
+		// setion 4: Features
+		trad_features1: "Science & Analytics",
+		trad_features2: "With advanced features, I help companies define the best direction, using analytics and data science to create a successful business.",
+
+		trad_features3: "",
+		trad_features4: "",
+
+		trad_features5: "",
+		trad_features6: ""
 
 
-		// Adicione mais traduções aqui
 	},
+
+	// --------------------------------------------------------------------
+	// ** TRADUÇÃO **
+
 	en: {
 		// setion 1: menu
 		trad_menu1: "Início",
 		trad_menu2: "Sobre mim",
 		trad_menu3: "Projetos e Pesquisas",
-		trad_menu4: "Contato"
+		trad_menu4: "Contato",
+
+		// setion 2: banner
+		trad_banner1: "Olá, sou Lucas",
+		trad_banner2: "Cientista de Dados",
+		trad_banner3: "&",
+		trad_banner4: "Engenheiro de ML",
+		trad_banner5: "Eu resolvo problemas complexos que conectam a experiência do usuário junto a segurança e risco do negócio, com soluções focadas Machine Learning e Inteligência Artificial.",
+
+		// setion 3: button download
+		btn_download: "Baixe CV",
+
+		// setion 4: Features
+		trad_features1: "Ciência & Análise",
+		trad_features2: "Com caracteristicas avançadas, ajudo empresas a definir a melhor direção, com o uso da análise e ciência de dados para criar um negócios bem sucedidos.",
+
+		trad_features3: "",
+		trad_features4: "",
+
+		trad_features5: "",
+		trad_features6: ""
 
 
-		// Add more translations here
 	}
 };
 
 function changeLanguage(lang) {
+	// Ajuste dos elementos mais elementos aqui
+
+	// setion 1: menu
 	document.getElementById('trad_menu1').textContent = translations[lang].trad_menu1;
 	document.getElementById('trad_menu2').textContent = translations[lang].trad_menu2;
 	document.getElementById('trad_menu3').textContent = translations[lang].trad_menu3;
 	document.getElementById('trad_menu4').textContent = translations[lang].trad_menu4;
-	// Atualize mais elementos aqui
+
+	// setion 2: banner
+	document.getElementById('trad_banner1').textContent = translations[lang].trad_banner1;
+	document.getElementById('trad_banner2').textContent = translations[lang].trad_banner2;
+	document.getElementById('trad_banner3').textContent = translations[lang].trad_banner3;
+	document.getElementById('trad_banner4').textContent = translations[lang].trad_banner4;
+	document.getElementById('trad_banner5').textContent = translations[lang].trad_banner5;
+
+	// setion 3: button download
+	document.getElementById('btn_download').textContent = translations[lang].btn_download;
+
+	// setion 4: Features
+	document.getElementById('trad_features1').textContent = translations[lang].trad_features1;
+	document.getElementById('trad_features2').textContent = translations[lang].trad_features2;
+
+	document.getElementById('trad_features3').textContent = translations[lang].trad_features3;
+	document.getElementById('trad_features4').textContent = translations[lang].trad_features4;
+
+	document.getElementById('trad_features5').textContent = translations[lang].trad_features5;
+	document.getElementById('trad_features6').textContent = translations[lang].trad_features6;
+
 }
 
 document.getElementById('language-toggle').addEventListener('change', function () {

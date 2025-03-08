@@ -2341,7 +2341,7 @@ html .button.button-primary-lighten:active {
 	flex-direction: row;
 }
 
-#btn-download {
+#btn_download {
 	display: flex;
 	align-items: center;
 	flex-direction: row;
@@ -2358,19 +2358,19 @@ html .button.button-primary-lighten:active {
 
 /* Adicionando bloco @media para abreviar o texto do botão */
 @media (max-width: 576px) {
-	#btn-download {
+	#btn_download {
 		font-size: 0;
 		padding: 3%;
 		width: 18%;
 	}
 
-	#btn-download::before {
+	#btn_download::before {
 		content: "CV";
 		font-size: 16px;
 		margin-right: 5px;
 	}
 
-	#btn-download img {
+	#btn_download img {
 		margin-left: 0;
 	}
 
@@ -9847,6 +9847,46 @@ html:not(.lt-ie10) .not-animated {
 .wow {
 	backface-visibility: hidden;
 }
+
+/*
+*
+* Banner of apresentation
+*/
+
+#trad_banner1 {
+	font-size: 1.3em;
+	/* Ajuste o tamanho de acordo com a necessidade */
+	font-weight: normal;
+	color: #333;
+	/* Tom de cinza */
+}
+
+#trad_banner2 {
+	font-size: 1.2em;
+	/* Maior tamanho */
+	font-weight: bold;
+	color: #000;
+	/* Preto */
+}
+
+#trad_banner3 {
+	font-size: 1.3em;
+	/* Mesmo tamanho do texto acima */
+	font-weight: bold;
+	color: #007bff;
+	/* Azul específico */
+}
+
+#trad_banner4 {
+	font-size: 1.2em;
+	font-weight: normal;
+	color: #000;
+	/* Preto */
+}
+
+
+
+
 
 /*
 *
