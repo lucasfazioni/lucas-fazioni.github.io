@@ -1060,11 +1060,20 @@ const translations = {
 		trad_features1: "Science & Analytics",
 		trad_features2: "With advanced features, I help companies define the best direction, using analytics and data science to create a successful business.",
 
-		trad_features3: "",
-		trad_features4: "",
+		trad_features3: "Management",
+		trad_features4: "With strong strategic skills, I work in project management and governance throughout the analytics steps. I have excellent communication skills and articulate technical concepts with clarity and objectivity.",
 
-		trad_features5: "",
-		trad_features6: ""
+		trad_features5: "Bank",
+		trad_features6: "With experience in banking and acquiring, I provide specialized solutions that can ensure higher profits for the business with the application of advanced ML and AI techniques.",
+
+		// setion 5: About Me
+		trad_about: "About Me",
+		trad_about2: "I currently work as a Data Scientist at Banco Sicredi, a Brazilian financial institution with 8+ million customers. Previously, I was in positions of Data Analyst and Risk Modeling Analyst at Getnet Brasil S.A, working with a focus on strategic planning in the CRM and Fraud Prevention areas. In the academic environment, I am studying the Master's program in Computer Science, working in the research line of Algorithms and Optimization, but I also have a postgraduate degree in Data Science and a bachelor's degree in Accounting Sciences.",
+
+		// setion 6: About Me - Icons
+		trad_about_icon1: "Years of Experience",
+		trad_about_icon2: "Programming Languages",
+		trad_about_icon3: "Project Completed"
 
 
 	},
@@ -1093,11 +1102,20 @@ const translations = {
 		trad_features1: "Ciência & Análise",
 		trad_features2: "Com caracteristicas avançadas, ajudo empresas a definir a melhor direção, com o uso da análise e ciência de dados para criar um negócios bem sucedidos.",
 
-		trad_features3: "",
-		trad_features4: "",
+		trad_features3: "Gestão",
+		trad_features4: "Com fortes habilidades estratégicas, atuo em gestão de projetos e governança em toda as steps de analytics. Possuo excelentes habilidades de comunicação e articulo conceitos técnicos com clareza e objetividade.",
 
-		trad_features5: "",
-		trad_features6: ""
+		trad_features5: "Bancária",
+		trad_features6: "Com experiência bancária e adquirência, forneço soluções especializadas que podem garantir maiores lucros para o negócio com a aplicação de técnicas avançadas de ML e IA.",
+
+		// setion 5: About Me
+		trad_about: "Sobre Mim",
+		trad_about2: "Atualmente trabalho como Ciêntista de Dados no Banco Sicredi, instituição financeira brasileira com 8+ milhões de clientes. Anteriormente,  estive em posições de Analista de Dados e Analista de modelagem de Risco na Getnet Brasil S.A, atuando com foco no planejamento estratégico das áreas de CRM e Prevenção a Fraudes. No meio acadêmico, estou cursando o programa de Mestrado em Ciência da Computação, atuando na linha de pesquisa de Algoritmos e Otimização, mas também possuo pós-graduação em Data Science e bacharelado em Ciências Contábeis.",
+
+		// setion 6: About Me - Icons
+		trad_about_icon1: "Anos de Experiência",
+		trad_about_icon2: "Linguagens de Programação",
+		trad_about_icon3: "Projetos Entregues"
 
 
 	}
@@ -1131,6 +1149,17 @@ function changeLanguage(lang) {
 
 	document.getElementById('trad_features5').textContent = translations[lang].trad_features5;
 	document.getElementById('trad_features6').textContent = translations[lang].trad_features6;
+
+
+	// setion 5: About Me
+	document.getElementById('trad_about').textContent = translations[lang].trad_about;
+	document.getElementById('trad_about2').textContent = translations[lang].trad_about2;
+
+	// setion 6: About Me - Icons
+	document.getElementById('trad_about_icon1').textContent = translations[lang].trad_about_icon1;
+	document.getElementById('trad_about_icon2').textContent = translations[lang].trad_about_icon2;
+	document.getElementById('trad_about_icon3').textContent = translations[lang].trad_about_icon3;
+
 
 }
 
