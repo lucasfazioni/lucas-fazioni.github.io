@@ -1073,8 +1073,14 @@ const translations = {
 		// setion 6: About Me - Icons
 		trad_about_icon1: "Years of Experience",
 		trad_about_icon2: "Programming Languages",
-		trad_about_icon3: "Project Completed"
+		trad_about_icon3: "Project Completed",
 
+		// setion 7: Banner - Apresentation
+		trad_banner_apr: "I connect data to advanced solutions that drive value",
+
+		// setion 8: My skills
+		trad_skills: "My Skills",
+		trad_skills2: "Since the beginning of my journey with big data, I have acquired some skills. Below are some statistics that represent the level of understanding and utilization of the tools as a percentage."
 
 	},
 
@@ -1115,9 +1121,14 @@ const translations = {
 		// setion 6: About Me - Icons
 		trad_about_icon1: "Anos de Experiência",
 		trad_about_icon2: "Linguagens de Programação",
-		trad_about_icon3: "Projetos Entregues"
+		trad_about_icon3: "Projetos Entregues",
 
+		// setion 7: Banner - Apresentation
+		trad_banner_apr: "Conecto dados a soluções avançadas que geram valor",
 
+		// setion 8: My skills
+		trad_skills: "Minhas Habilidades",
+		trad_skills2: "Desde o início da minha jornada com big data, adqueri algumas habilidades. Abaixo estão algumas estatísticas que representam o nível de entendimento e utilização das ferramentas percentualmente."
 	}
 };
 
@@ -1160,6 +1171,12 @@ function changeLanguage(lang) {
 	document.getElementById('trad_about_icon2').textContent = translations[lang].trad_about_icon2;
 	document.getElementById('trad_about_icon3').textContent = translations[lang].trad_about_icon3;
 
+	// setion 7: Banner - Apresentation
+	document.getElementById('trad_banner_apr').textContent = translations[lang].trad_banner_apr;
+
+	// setion 8: My skills
+	document.getElementById('trad_skills').textContent = translations[lang].trad_skills;
+	document.getElementById('trad_skills2').textContent = translations[lang].trad_skills2;
 
 }
 

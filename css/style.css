@@ -1048,9 +1048,9 @@ div.box-cta-1>* {
 	vertical-align: middle;
 }
 
-div.box-cta-thin {
+/* div.box-cta-thin {
 	margin-top: 2%;
-}
+} */
 
 div.box-cta-thin:empty {
 	margin-bottom: 0;
@@ -2350,6 +2350,8 @@ html .button.button-primary-lighten:active {
 	flex-direction: row;
 }
 
+
+
 #btn_download {
 	display: flex;
 	align-items: center;
@@ -2369,8 +2371,9 @@ html .button.button-primary-lighten:active {
 @media (max-width: 576px) {
 	#btn_download {
 		font-size: 0;
-		padding: 3%;
-		width: 18%;
+		margin-bottom: -4px;
+		/* padding: 3%;
+		width: 18%; */
 	}
 
 	#btn_download::before {
@@ -2387,7 +2390,12 @@ html .button.button-primary-lighten:active {
 		display: flex;
 		flex-direction: row;
 		gap: 2%;
+	}
 
+	#download_style {
+		padding-left: 1em;
+		padding-right: 1em;
+		padding-top: 0.8em;
 	}
 }
 
@@ -5486,11 +5494,15 @@ input.check-toggle-round-flat:checked+label:after {
 
 /* about me - icons */
 
-
 .container_about {
 	display: flex;
 	justify-content: space-around;
 	width: 80%;
+}
+
+.ajuste_container_about {
+	display: flex;
+	margin-left: 10%;
 }
 
 .stat {
@@ -5500,6 +5512,7 @@ input.check-toggle-round-flat:checked+label:after {
 
 .stat .number_icon {
 	font-size: 3em;
+	color: #28334f;
 	font-weight: bold;
 	margin-right: 10px;
 }
@@ -5509,6 +5522,46 @@ input.check-toggle-round-flat:checked+label:after {
 	text-align: left;
 	width: 45px;
 }
+
+
+@media (max-width: 990px) {
+	.container_about {
+		display: flex;
+		flex-direction: column;
+		/* margin-left: 10%; */
+	}
+
+	.stat {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.ajuste_container_about {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-left: -9%;
+	}
+}
+
+
+/* titules - configuration color */
+#trad_skills {
+	font-style: bold;
+	font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	background: linear-gradient(to right, #071a4b, #a0b6ef);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+#trad_about {
+	font-style: bold;
+	font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	background: linear-gradient(to right, #071a4b, #a0b6ef);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
 
 
 /* img logo nav bar */
