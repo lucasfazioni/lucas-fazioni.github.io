@@ -993,7 +993,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const filters = document.querySelectorAll('.switch_proj label');
 	let visibleCards = 8;
 	const cards = document.querySelectorAll('.cards_filter');
-	const showMoreBtn = document.getElementById('show-more-btn');
+	const showMoreBtn = document.getElementById('show_more_btn');
 	let currentFilter = 'all';
 
 	function filterCards(filterValue) {
@@ -1080,8 +1080,56 @@ const translations = {
 
 		// setion 8: My skills
 		trad_skills: "My Skills",
-		trad_skills2: "Since the beginning of my journey with big data, I have acquired some skills. Below are some statistics that represent the level of understanding and utilization of the tools as a percentage."
+		trad_skills2: "Since the beginning of my journey with big data, I have acquired some skills. Below are some statistics that represent the level of understanding and utilization of the tools as a percentage.",
 
+		// setion 9: Projects and Research - Title
+		trad_project_research: 'Projects and Research',
+
+		// setion 10: Projects and Research - menu selection
+		trad_proj_res_menu: 'All',
+		trad_proj_res_menu1: 'Projects',
+		trad_proj_res_menu2: 'Research',
+
+
+		// ---------------------------------- //
+		// ---------------------------------- //
+
+		// setion *: Projects and Research - Projects Description
+
+		// <!-- Post 1-->
+		trad_proj_description_p1: "Note: ",
+		trad_proj_description_details_p1: "Model that predicts results based on independent variables, finding linear relationships in complex data. Look at datelhes in the link.",
+		trad_proj_title_details_p1: "Linear regression model for the financial health of the business",
+		trad_proj_date_details_p1: "ago 24",
+		trad_tag_proj_p1: 'Projects',
+
+
+		// <!-- Post 3-->
+		trad_proj_description_p3: "Note: ",
+		trad_proj_description_details_p3: "Model that predicts results based on independent variables, finding linear relationships in complex data. Look at datelhes in the link.",
+		trad_proj_title_details_p3: "Linear regression model for the financial health of the business",
+		trad_proj_date_details_p3: "ago 24",
+		trad_tag_proj_p3: 'Projects',
+
+		// ---------------------------------- //
+
+
+		// setion *: Projects and Research - Research Description
+
+		// <!-- Post 2-->
+		trad_res_description_p2: "Note: ",
+		trad_res_description_details_p2: "Effective data management not only improves operational efficiency but also drives innovation and provides competitive advantage.",
+		trad_res_title_details_p2: "Data Drive Culture",
+		trad_res_date_details_p2: "out 24",
+		trad_tag_res_p2: 'Research',
+
+
+		// ---------------------------------- //
+		// ---------------------------------- //
+
+
+		// setion 11: Button - Show more
+		show_more_btn: 'Show more'
 	},
 
 	// --------------------------------------------------------------------
@@ -1128,7 +1176,56 @@ const translations = {
 
 		// setion 8: My skills
 		trad_skills: "Minhas Habilidades",
-		trad_skills2: "Desde o início da minha jornada com big data, adqueri algumas habilidades. Abaixo estão algumas estatísticas que representam o nível de entendimento e utilização das ferramentas percentualmente."
+		trad_skills2: "Desde o início da minha jornada com big data, adqueri algumas habilidades. Abaixo estão algumas estatísticas que representam o nível de entendimento e utilização das ferramentas percentualmente.",
+
+		// setion 9: Projects and Research - Title
+		trad_project_research: 'Projetos e Pesquisas',
+
+		// setion 10: Projects and Research - menu selection
+		trad_proj_res_menu: 'Ambos',
+		trad_proj_res_menu1: 'Projetos',
+		trad_proj_res_menu2: 'Pesquisas',
+
+
+		// ---------------------------------- //
+		// ---------------------------------- //
+
+		// setion *: Projects and Research - Projects Description
+
+		// <!-- Post 1-->
+		trad_proj_description_p1: "Nota: ",
+		trad_proj_description_details_p1: "Modelo que prevê resultados com base em variáveis independentes, encontrando relações lineares em dados complexos. Observe com datelhes no link.",
+		trad_proj_title_details_p1: "Modelo de regressão linear, para saúde financeira do negócio",
+		trad_proj_date_details_p1: "ago 24",
+		trad_tag_proj_p1: 'Projetos',
+
+
+		// <!-- Post 3-->
+		trad_proj_description_p3: "Nota: ",
+		trad_proj_description_details_p3: "Modelo que prevê resultados com base em variáveis independentes, encontrando relações lineares em dados complexos. Observe com datelhes no link.",
+		trad_proj_title_details_p3: "Modelo de regressão linear, para saúde financeira do negócio",
+		trad_proj_date_details_p3: "ago 24",
+		trad_tag_proj_p3: 'Projetos',
+
+		// ---------------------------------- //
+
+
+		// setion *: Projects and Research - Research Description
+
+		// <!-- Post 2-->
+		trad_res_description_p2: "Nota: ",
+		trad_res_description_details_p2: "Uma gestão de dados eficaz não apenas melhora a eficiência operacional, mas também impulsiona a inovação e fornece vantagem competitiva.",
+		trad_res_title_details_p2: "Cultura Data Driven",
+		trad_res_date_details_p2: "out 24",
+		trad_tag_res_p2: 'Pesquisas',
+
+
+		// ---------------------------------- //
+		// ---------------------------------- //
+
+		// setion 11: Button - Show more
+		show_more_btn: 'Exibir mais'
+
 	}
 };
 
@@ -1177,6 +1274,54 @@ function changeLanguage(lang) {
 	// setion 8: My skills
 	document.getElementById('trad_skills').textContent = translations[lang].trad_skills;
 	document.getElementById('trad_skills2').textContent = translations[lang].trad_skills2;
+
+	// setion 9: Projects and Research - Title
+	document.getElementById('trad_project_research').textContent = translations[lang].trad_project_research;
+
+	// setion 10: Projects and Research - menu selection
+	document.getElementById('trad_proj_res_menu').textContent = translations[lang].trad_proj_res_menu;
+	document.getElementById('trad_proj_res_menu1').textContent = translations[lang].trad_proj_res_menu1;
+	document.getElementById('trad_proj_res_menu2').textContent = translations[lang].trad_proj_res_menu2;
+
+
+	// ---------------------------------- //
+	// ---------------------------------- //
+
+
+	// setion *: Projects and Research - Projects Description
+
+	// <!-- Post 1-->
+	document.getElementById('trad_proj_description_details_p1').textContent = translations[lang].trad_proj_description_details_p1;
+	document.getElementById('trad_proj_title_details_p1').textContent = translations[lang].trad_proj_title_details_p1;
+	document.getElementById('trad_proj_date_details_p1').textContent = translations[lang].trad_proj_date_details_p1;
+	document.getElementById('trad_proj_description_p1').textContent = translations[lang].trad_proj_description_p1;
+	document.getElementById('trad_tag_proj_p1').textContent = translations[lang].trad_tag_proj_p1;
+
+	// <!-- Post 3-->
+	document.getElementById('trad_proj_description_details_p3').textContent = translations[lang].trad_proj_description_details_p3;
+	document.getElementById('trad_proj_title_details_p3').textContent = translations[lang].trad_proj_title_details_p3;
+	document.getElementById('trad_proj_date_details_p3').textContent = translations[lang].trad_proj_date_details_p3;
+	document.getElementById('trad_proj_description_p3').textContent = translations[lang].trad_proj_description_p3;
+	document.getElementById('trad_tag_proj_p3').textContent = translations[lang].trad_tag_proj_p3;
+
+	// ---------------------------------- //
+
+	// setion *: Projects and Research - Research Description
+
+	// <!-- Post 2-->
+	document.getElementById('trad_res_description_details_p2').textContent = translations[lang].trad_res_description_details_p2;
+	document.getElementById('trad_res_title_details_p2').textContent = translations[lang].trad_res_title_details_p2;
+	document.getElementById('trad_res_date_details_p2').textContent = translations[lang].trad_res_date_details_p2;
+	document.getElementById('trad_res_description_p2').textContent = translations[lang].trad_res_description_p2;
+	document.getElementById('trad_tag_res_p2').textContent = translations[lang].trad_tag_res_p2;
+
+
+	// ---------------------------------- //
+	// ---------------------------------- //
+
+	// setion 11: Button - Show more
+	document.getElementById('show_more_btn').textContent = translations[lang].show_more_btn;
+
 
 }
 
