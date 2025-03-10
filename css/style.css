@@ -5558,7 +5558,7 @@ input.check-toggle-round-flat:checked+label:after {
 }
 
 
-/* titules - configuration color */
+/* titles - configuration color */
 #trad_skills {
 	font-style: bold;
 	font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -5582,6 +5582,15 @@ input.check-toggle-round-flat:checked+label:after {
 	background: linear-gradient(to right, #071a4b, #a0b6ef);
 	-webkit-background-clip: text;
 	color: transparent;
+}
+
+#trad_my_experience {
+	font-style: bold;
+	font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	background: linear-gradient(to right, #071a4b, #a0b6ef);
+	-webkit-background-clip: text;
+	color: transparent;
+	margin-bottom: 4%;
 }
 
 

@@ -1129,7 +1129,14 @@ const translations = {
 
 
 		// setion 11: Button - Show more
-		show_more_btn: 'Show more'
+		show_more_btn: 'Show more',
+
+		// setion 12: My experience
+		trad_my_experience: 'My Experience',
+		trad_my_experience_1: 'Data Scientist Mid - Risk & Fraud',
+		trad_my_experience_2: 'Fraud Prevention Modeling',
+		trad_my_experience_3: 'Data Analytics Mid',
+		trad_my_experience_4: 'Fraud Prevention Modeling'
 	},
 
 	// --------------------------------------------------------------------
@@ -1224,8 +1231,14 @@ const translations = {
 		// ---------------------------------- //
 
 		// setion 11: Button - Show more
-		show_more_btn: 'Exibir mais'
+		show_more_btn: 'Exibir mais',
 
+		// setion 12: My experience
+		trad_my_experience: 'Minhas Experiências',
+		trad_my_experience_1: '',
+		trad_my_experience_2: '',
+		trad_my_experience_3: '',
+		trad_my_experience_4: ''
 	}
 };
 
@@ -1322,7 +1335,12 @@ function changeLanguage(lang) {
 	// setion 11: Button - Show more
 	document.getElementById('show_more_btn').textContent = translations[lang].show_more_btn;
 
-
+	// setion 12: My experience
+	document.getElementById('trad_my_experience').textContent = translations[lang].trad_my_experience;
+	document.getElementById('trad_my_experience_1').textContent = translations[lang].trad_my_experience_1;
+	document.getElementById('trad_my_experience_2').textContent = translations[lang].trad_my_experience_2;
+	document.getElementById('trad_my_experience_3').textContent = translations[lang].trad_my_experience_3;
+	document.getElementById('trad_my_experience_4').textContent = translations[lang].trad_my_experience_4;
 }
 
 document.getElementById('language-toggle').addEventListener('change', function () {
