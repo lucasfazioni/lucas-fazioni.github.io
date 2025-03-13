@@ -1193,8 +1193,18 @@ const translations = {
 		Course_4: 'Degree Apache Spark',
 		Course_5: 'Degree Data Engineering with Databricks',
 		Course_6: 'Degree Statistics with Python',
-		Course_7: 'Degree Data Science'
+		Course_7: 'Degree Data Science',
 
+		// setion 13: Contact Me
+		trad_contact: 'Contact Me',
+		trad_contact_1: 'I develop solutions from simple to advanced and I love what I do. Contact Me!',
+		trad_contact_2: 'Name',
+		trad_contact_3: 'E-mail',
+		trad_contact_4: 'Phone',
+		trad_contact_5: 'Your Message',
+
+		// setion 13: Contact Me - Button - Send
+		show_more_btn2: 'Send Message'
 	},
 
 	// --------------------------------------------------------------------
@@ -1309,17 +1319,16 @@ const translations = {
 		// setion 12: My Education
 		trad_education: 'Educação',
 		trad_education_1: 'Universidade Federal do Rio Grande do Sul',
-		trad_time_edu_1: "Mestrado (M.Sc.), Ciência da Computação",
-		// trad_time_edu_1: 'Mar 2025 - Atual',
+		trad_type_edu_1: "Mestrado (M.Sc.), Ciência da Computação",
 
-		trad_education_2: 'Pós-graduação, Ciência de Dados',
-		trad_time_edu_2: 'Ago 2023 - Jul 2024',
+		trad_education_2: 'Centro Universitário Ritter dos Reis',
+		trad_type_edu_2: 'Pós-graduação, Ciência de Dados',
 
-		trad_education_3: 'Bacharelado (B.Sc.), Ciências Contábeis',
-		trad_time_edu_3: '2016 - Dez 2022',
+		trad_education_3: 'Uninter Centro Universitário Internacional',
+		trad_type_edu_3: 'Bacharelado (B.Sc.), Ciências Contábeis',
 
-		trad_education_4: 'Cursos de Especialização',
-		trad_time_edu_4: 'Fev 2023 - Jan 2024',
+		trad_education_4: 'Alura',
+		trad_type_edu_4: 'Cursos de Especialização',
 
 		Course_1: 'Formação Deep Learning',
 		Course_2: 'Formação Machine Learning Avançado',
@@ -1327,7 +1336,19 @@ const translations = {
 		Course_4: 'Formação Apache Spark',
 		Course_5: 'Formação Engenharia de dados com Databricks',
 		Course_6: 'Formação Estátisca com Python',
-		Course_7: 'Formação Ciência de Dados'
+		Course_7: 'Formação Ciência de Dados',
+
+
+		// setion 13: Contact Me
+		trad_contact: 'Entre em Contato',
+		trad_contact_1: 'Eu desenvolvo soluções do simples ao avançado e amo o que faço. Entre em contato comigo!',
+		trad_contact_2: 'Nome',
+		trad_contact_3: 'E-mail',
+		trad_contact_4: 'Telefone',
+		trad_contact_5: 'Sua Mensagem',
+
+		// setion 13: Contact Me - Button - Send
+		show_more_btn2: 'Enviar Mensagem'
 	}
 };
 
@@ -1444,16 +1465,16 @@ function changeLanguage(lang) {
 	document.getElementById('trad_education').textContent = translations[lang].trad_education;
 
 	document.getElementById('trad_education_1').textContent = translations[lang].trad_education_1;
-	document.getElementById('trad_time_edu_1').textContent = translations[lang].trad_time_edu_1;
+	document.getElementById('trad_type_edu_1').textContent = translations[lang].trad_type_edu_1;
 
 	document.getElementById('trad_education_2').textContent = translations[lang].trad_education_2;
-	document.getElementById('trad_time_edu_2').textContent = translations[lang].trad_time_edu_2;
+	document.getElementById('trad_type_edu_2').textContent = translations[lang].trad_type_edu_2;
 
 	document.getElementById('trad_education_3').textContent = translations[lang].trad_education_3;
-	document.getElementById('trad_time_edu_3').textContent = translations[lang].trad_time_edu_3;
+	document.getElementById('trad_type_edu_3').textContent = translations[lang].trad_type_edu_3;
 
 	document.getElementById('trad_education_4').textContent = translations[lang].trad_education_4;
-	document.getElementById('trad_time_edu_4').textContent = translations[lang].trad_time_edu_4;
+	document.getElementById('trad_type_edu_4').textContent = translations[lang].trad_type_edu_4;
 
 	document.getElementById('Course_1').textContent = translations[lang].Course_1;
 	document.getElementById('Course_2').textContent = translations[lang].Course_2;
@@ -1463,6 +1484,16 @@ function changeLanguage(lang) {
 	document.getElementById('Course_6').textContent = translations[lang].Course_6;
 	document.getElementById('Course_7').textContent = translations[lang].Course_7;
 
+	// setion 13: Contact Me
+	document.getElementById('trad_contact').textContent = translations[lang].trad_contact;
+	document.getElementById('trad_contact_1').textContent = translations[lang].trad_contact_1;
+	document.getElementById('trad_contact_2').textContent = translations[lang].trad_contact_2;
+	document.getElementById('trad_contact_3').textContent = translations[lang].trad_contact_3;
+	document.getElementById('trad_contact_4').textContent = translations[lang].trad_contact_4;
+	document.getElementById('trad_contact_5').textContent = translations[lang].trad_contact_5;
+
+	// setion 13: Contact Me - Button - Send
+	document.getElementById('show_more_btn2').textContent = translations[lang].show_more_btn2;
 
 }
 

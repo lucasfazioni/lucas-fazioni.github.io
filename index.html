@@ -36,7 +36,7 @@
                 <a class="rd-navbar-brand" href="index.html">
                   <img id='id_img_exclude' src="images/logo-default-398x45.svg" alt="" width="199" height="22" /></a>
                 <a href="index.html">
-                  <img id='id_img_reduce' src="images/logo-reduced.svg" alt="" /></a>
+                  <img id='id_img_reduce' src="images/logo-default-398x45.svg" alt="" /></a>
                 <div class="rd-navbar-block" id="rd-navbar-hidden-1">
                   <div class="rd-navbar-collapse">
                     <ul class="rd-navbar-nav">
@@ -115,7 +115,6 @@
         </div>
       </div>
     </section>
-    <!-- <div class="tabs-horizontal"></div> -->
     <!-- Features-->
     <section class="section section-lg bg-gray-100">
       <div class="container">
@@ -373,7 +372,7 @@
             <div class="ajuste_experience">
               <p>Porto Alegre, Brazil</p>
               <h3 id="trad_education_1">Federal University of Rio Grande do Sul</h3>
-              <p style="font-weight: 500;" id="trad_time_edu_1">Master's degree (M.Sc.), Computer Science</p>
+              <p style="font-weight: 500;" id="trad_type_edu_1">Master's degree (M.Sc.), Computer Science</p>
             </div>
             <img src="images/logo_UFRGS.svg" alt="" style="width: 30%;">
           </div>
@@ -381,7 +380,7 @@
             <div class="ajuste_experience">
               <p>Canoas, Brazil</p>
               <h3 id="trad_education_2">UniRitter University Center Ritter dos Reis</h3>
-              <p style="font-weight: 500;" id="trad_time_edu_2">Post-graduation, Data Science</p>
+              <p style="font-weight: 500;" id="trad_type_edu_2">Post-graduation, Data Science</p>
             </div>
             <img src="images/logo_uniritter.svg" alt="" style="width: 30%;">
           </div>
@@ -389,7 +388,7 @@
             <div class="ajuste_experience">
               <p>Curitiba, Brazil</p>
               <h3 id="trad_education_3">UnInter International University Center</h3>
-              <p style="font-weight: 500;" id="trad_time_edu_3">Bachelor of Science (B.Sc.), Accounting Sciences</p>
+              <p style="font-weight: 500;" id="trad_type_edu_3">Bachelor of Science (B.Sc.), Accounting Sciences</p>
             </div>
             <img style="width: 18%;" src="images/logo_uninter.svg" alt="">
           </div>
@@ -398,7 +397,7 @@
               <div class="ajuste_experience">
                 <p>São Paulo, Brazil</p>
                 <h3 id="trad_education_4">School Alura</h3>
-                <p style="font-weight: 500;" id="trad_time_edu_4">Specialization Courses</p>
+                <p style="font-weight: 500;" id="trad_type_edu_4">Specialization Courses</p>
               </div>
               <div id="maximum_education" style="padding-left: 30%;" onclick="toggleDropdown()">
                 <p style="font-family: fantasy;font-size: larger;">+</p>
@@ -409,13 +408,13 @@
               <img src="images/logo_alura.svg" alt="" style="width: 20%;">
             </div>
             <div class="dropdown" id="dropdown">
-              <a href="#" style="margin-top: 5%;" id="Course_1">Degree Deep Learning</a>
-              <a href="#" id="Course_2">Degree Machine Learning Advanced</a>
-              <a href="#" id="Course_3">Degree Natural language processing techniques</a>
-              <a href="#" id="Course_4">Degree Apache Spark</a>
-              <a href="#" id="Course_5">Degree Data Engineering with Databricks</a>
-              <a href="#" id="Course_6">Degree Statistics with Python</a>
-              <a href="#" id="Course_7">Degree Data Science</a>
+              <a style="margin-top: 5%;" id="Course_1">Degree Deep Learning</a>
+              <a id="Course_2">Degree Machine Learning Advanced</a>
+              <a id="Course_3">Degree Natural language processing techniques</a>
+              <a id="Course_4">Degree Apache Spark</a>
+              <a id="Course_5">Degree Data Engineering with Databricks</a>
+              <a id="Course_6">Degree Statistics with Python</a>
+              <a id="Course_7">Degree Data Science</a>
             </div>
           </div>
         </div>
@@ -519,36 +518,35 @@
           <div class="row">
             <div class="col-lg-9 cell-inner">
               <div id="contact" class="section-lg">
-                <h3 class="wow-outer"><span id='title-text' class="wow slideInDown">Contact Me</span></h3>
-                <p class="wow-outer"><span class="text-width-1 wow slideInDown">Since our establishment in 2002, our
-                    team ha achieved a lot. Below are some statistics and interesting facts about our business
-                    consulting
-                    company.</span></p>
+                <h3 class="wow-outer" id="trad_contact"><span id='title-text' class="wow slideInDown">Contact Me</span>
+                </h3>
+                <p class="wow-outer"><span class="text-width-1 wow slideInDown" id="trad_contact_1">I develop solutions
+                    from simple to advanced and I love what I do. Get in touch!</span></p>
                 <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact"
                   action="https://api.staticforms.xyz/submit" method="post">
                   <div class="row row-10">
                     <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
-                        <label class="form-label-outside" for="contact-first-name">Name</label>
+                        <label class="form-label-outside" for="contact-first-name" id="trad_contact_2">Name</label>
                         <input class="form-input" id="contact-first-name" type="text" name="name"
                           data-constraints="@Required">
                       </div>
                     </div>
                     <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
-                        <label class="form-label-outside" for="contact-email">E-mail</label>
+                        <label class="form-label-outside" for="contact-email" id="trad_contact_3">E-mail</label>
                         <input class="form-input" id="contact-email" type="email" name="email"
                           data-constraints="@Email @Required">
                       </div>
                       <div class="form-wrap wow fadeSlideInUp">
-                        <label class="form-label-outside" for="contact-phone">Phone</label>
+                        <label class="form-label-outside" for="contact-phone" id="trad_contact_4">Phone</label>
                         <input class="form-input" id="contact-phone" type="text" name="phone"
                           data-constraints="@PhoneNumber">
                       </div>
                     </div>
                     <div class="col-12 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
-                        <label class="form-label-outside" for="contact-message">Your Message</label>
+                        <label class="form-label-outside" for="contact-message" id="trad_contact_5">Your Message</label>
                         <textarea class="form-input" id="contact-message" name="message"
                           data-constraints="@Required"></textarea>
                       </div>
@@ -559,8 +557,7 @@
                     <input type="hidden" name="subject" value="Contact me from - Portfólio DS" />
                     <div class="wow-outer">
                       <button class="button button-primary button-winona wow slideInRight" type="submit" value="Submit"
-                        id="show-more-btn2">Send
-                        Message</button>
+                        id="show_more_btn2">Send Message</button>
                     </div>
                   </div>
               </div>
