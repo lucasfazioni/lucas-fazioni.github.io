@@ -331,74 +331,92 @@
     <section class="section bg-gray-new">
       <div class="container_experience">
         <div class="column">
-          <h3 class="wow-outer" id="trad_my_experience"><span id='title-text' class="wow slideInDown">My
-              Experience</span></h3>
+          <h3 class="wow-outer" id="trad_my_experience"><span id='title-text' class="wow slideInDown">Experience</span>
+          </h3>
           <div class="entry">
             <div class="ajuste_experience">
-              <h3>2022 - Present</h3>
-              <h3>Programming Course</h3>
-              <p>Blockdots, London</p>
+              <p style="font-weight: 500;" id="trad_time_exp_1">Apr 2024 - Present</p>
+              <h3 id="trad_my_experience_1">Data Scientist Mid - Risk & Fraud</h3>
+              <p>Porto Alegre, Brazil</p>
             </div>
             <img src="images/logo_sicredi.svg" alt="">
           </div>
           <div class="entry">
             <div class="ajuste_experience">
-              <h3>2022 - Present</h3>
-              <h3>Programming Course</h3>
-              <p>Blockdots, London</p>
+              <p style="font-weight: 500;" id="trad_time_exp_2">Sep 2022 - Mar 2024</p>
+              <h3 id="trad_my_experience_2">Fraud Prevention Modeling</h3>
+              <p>Porto Alegre, Brazil</p>
             </div>
             <img src="images/logo_sicredi.svg" alt="">
           </div>
           <div class="entry">
             <div class="ajuste_experience">
-              <h3>2022 - Present</h3>
-              <h3>Programming Course</h3>
-              <p>Blockdots, London</p>
+              <p style="font-weight: 500;" id="trad_time_exp_3">Jan 2020 - Dec 2020</p>
+              <h3 id="trad_my_experience_3">Data Analytics Mid</h3>
+              <p>Porto Alegre, Brazil</p>
             </div>
             <img src="images/logo_getnet.svg" alt="">
           </div>
           <div class="entry">
             <div class="ajuste_experience">
-              <h3>2022 - Present</h3>
-              <h3>Programming Course</h3>
-              <p>Blockdots, London</p>
+              <p style="font-weight: 500;" id="trad_time_exp_4">Jan 2019 - Dec 2019</p>
+              <h3 id="trad_my_experience_4">Fraud Prevention Modeling</h3>
+              <p>Porto Alegre, Brazil</p>
             </div>
             <img src="images/logo_getnet.svg" alt="">
           </div>
         </div>
         <div class="column">
-          <h3 class="wow-outer"><span id='title-text' class="wow slideInUp">My Education</span></h3>
+          <h3 class="wow-outer" id="trad_education"><span id='title-text' class="wow slideInDown">Education</span>
+          </h3>
           <div class="entry">
             <div class="ajuste_experience">
-              <h3>2022 - Present</h3>
-              <h3>Programming Course</h3>
-              <p>Blockdots, London</p>
+              <p>Porto Alegre, Brazil</p>
+              <h3 id="trad_education_1">Federal University of Rio Grande do Sul</h3>
+              <p style="font-weight: 500;" id="trad_time_edu_1">Master's degree (M.Sc.), Computer Science</p>
             </div>
-            <!-- <img src="images/logo_getnet.svg" alt=""> -->
+            <img src="images/logo_UFRGS.svg" alt="" style="width: 30%;">
           </div>
           <div class="entry">
             <div class="ajuste_experience">
-              <h3>2022 - Present</h3>
-              <h3>Programming Course</h3>
-              <p>Blockdots, London</p>
+              <p>Canoas, Brazil</p>
+              <h3 id="trad_education_2">UniRitter University Center Ritter dos Reis</h3>
+              <p style="font-weight: 500;" id="trad_time_edu_2">Post-graduation, Data Science</p>
             </div>
-            <!-- <img src="images/logo_getnet.svg" alt=""> -->
+            <img src="images/logo_uniritter.svg" alt="" style="width: 30%;">
           </div>
           <div class="entry">
             <div class="ajuste_experience">
-              <h3>2022 - Present</h3>
-              <h3>Programming Course</h3>
-              <p>Blockdots, London</p>
+              <p>Curitiba, Brazil</p>
+              <h3 id="trad_education_3">UnInter International University Center</h3>
+              <p style="font-weight: 500;" id="trad_time_edu_3">Bachelor of Science (B.Sc.), Accounting Sciences</p>
             </div>
-            <!-- <img src="images/logo_getnet.svg" alt=""> -->
+            <img style="width: 18%;" src="images/logo_uninter.svg" alt="">
           </div>
-          <div class="entry">
-            <div class="ajuste_experience">
-              <h3>2022 - Present</h3>
-              <h3>Programming Course</h3>
-              <p>Blockdots, London</p>
+          <div class="entry_education" onclick="toggleDropdown()">
+            <div class="ajuste_education_macro">
+              <div class="ajuste_experience">
+                <p>São Paulo, Brazil</p>
+                <h3 id="trad_education_4">School Alura</h3>
+                <p style="font-weight: 500;" id="trad_time_edu_4">Specialization Courses</p>
+              </div>
+              <div id="maximum_education" style="padding-left: 30%;" onclick="toggleDropdown()">
+                <p style="font-family: fantasy;font-size: larger;">+</p>
+              </div>
+              <div id="minimum_education" style="padding-left: 30%;" onclick="toggleDropdown()">
+                <p style="font-family: fantasy;font-size: larger;">-</p>
+              </div>
+              <img src="images/logo_alura.svg" alt="" style="width: 20%;">
             </div>
-            <!-- <img src="images/logo_getnet.svg" alt=""> -->
+            <div class="dropdown" id="dropdown">
+              <a href="#" style="margin-top: 5%;" id="Course_1">Degree Deep Learning</a>
+              <a href="#" id="Course_2">Degree Machine Learning Advanced</a>
+              <a href="#" id="Course_3">Degree Natural language processing techniques</a>
+              <a href="#" id="Course_4">Degree Apache Spark</a>
+              <a href="#" id="Course_5">Degree Data Engineering with Databricks</a>
+              <a href="#" id="Course_6">Degree Statistics with Python</a>
+              <a href="#" id="Course_7">Degree Data Science</a>
+            </div>
           </div>
         </div>
       </div>

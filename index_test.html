@@ -1,65 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estatísticas</title>
+    <title>Dropdown de Curso</title>
     <style>
         body {
-            background-color: white;
-            color: #1a1a1a;
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
         }
 
-        .container_about {
-            display: flex;
-            justify-content: space-around;
-            width: 80%;
+        .container {
+            position: relative;
+            width: 300px;
+            text-align: center;
         }
 
-        .stat {
-            display: flex;
-            align-items: center;
+        .retangulo {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
         }
 
-        .stat .number {
-            font-size: 3em;
-            font-weight: bold;
-            margin-right: 10px;
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: gray;
+            /* Cor cinza para o fundo */
+            min-width: 300px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin-top: 10px;
+            z-index: 1;
+            padding: 5px;
+            /* Adicionar padding geral */
         }
 
-        .stat .text {
-            font-size: 1em;
-            text-align: left;
-            width: 45px;
+        .dropdown a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #d3d3d3;
+            /* Adicionar uma linha cinza clara entre os itens */
+        }
+
+        .dropdown a:last-child {
+            border-bottom: none;
+            /* Remover a borda inferior do último item */
+        }
+
+        .dropdown a:hover {
+            background-color: #f1f1f1;
         }
     </style>
 </head>
 
 <body>
-    <div class="container_about">
-        <div class="stat">
-            <img src="images/icon_about_experience.svg" style=" width: 4em; margin: 5%;">
-            <div class="number">5+</div>
-            <div class="text">Anos de Experiência</div>
+    <div class="container">
+        <div class="retangulo" onclick="toggleDropdown()">
+            2022 - Presente<br>Curso de Programação<br>Blockdots, Londres
+            <span class="arrow" id="arrow">▶</span>
         </div>
-        <div class="stat">
-            <img src="images/icon_about_project.svg" style="width: 3.5em; margin: 5%;">
-            <div class="number">30+</div>
-            <div class="text">Projetos Completados</div>
-        </div>
-        <div class="stat">
-            <img src="images/icon_about_code.svg" style="width: 3.5em; margin: 5%;">
-            <div class="number">4</div>
-            <div class="text">Linguagens de Programação</div>
-        </div>
-    </div>
+        <div class="dropdown" id="dropdown">
+            <a href="#">Detalhes do Curso</a>
+            <a href="#">Ementa</a>
+            <a href="#">Inscreva-se</a>
+
+            <script>
+                function toggleDropdown() {
+                    var dropdown = document.getElementById("dropdown");
+                    if (dropdown.style.display === "block") {
+                        dropdown.style.display = "none";
+                    } else {
+                        dropdown.style.display = "block";
+                    }
+                }
+            </script>
 </body>
 
 </html>

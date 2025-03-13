@@ -5593,6 +5593,15 @@ input.check-toggle-round-flat:checked+label:after {
 	margin-bottom: 4%;
 }
 
+#trad_education {
+	font-style: bold;
+	font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	background: linear-gradient(to right, #071a4b, #a0b6ef);
+	-webkit-background-clip: text;
+	color: transparent;
+	margin-bottom: 4%;
+}
+
 
 /* img logo nav bar */
 
@@ -5952,7 +5961,7 @@ input.check-toggle-round-flat:checked+label:after {
 }
 
 .entry {
-	background-color: #2d2d2d;
+	background-color: #343a40;
 	padding: 20px;
 	margin-bottom: 20px;
 	margin-top: 2%;
@@ -5961,12 +5970,13 @@ input.check-toggle-round-flat:checked+label:after {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	cursor: pointer;
 	justify-content: space-between;
 }
 
 .entry:hover {
 	transform: translateY(-5px);
-	background-color: #4a4a4a;
+	/* background-color: #4a4a4a; */
 }
 
 .entry h3 {
@@ -5985,11 +5995,80 @@ input.check-toggle-round-flat:checked+label:after {
 	width: 25%;
 }
 
-.ajuste_experience {
+
+/* steps education and experiences */
+
+.ajuste_education_macro {
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
 }
 
+
+.entry_education {
+	background-color: #343a40;
+	padding: 20px;
+	margin-bottom: 20px;
+	margin-top: 2%;
+	border-radius: 8px;
+	transition: transform 0.3s, background-color 0.3s;
+	align-items: center;
+	cursor: pointer;
+	justify-content: space-between;
+}
+
+.entry_education:hover {
+	transform: translateY(-5px);
+	/* background-color: #4a4a4a; */
+}
+
+.entry_education h3 {
+	margin: 0;
+	font-size: 18px;
+	color: #fff;
+}
+
+.entry_education p {
+	margin: 5px 0 0;
+	font-size: 14px;
+	color: #ccc;
+}
+
+.entry_education img {
+	width: 25%;
+}
+
+.dropdown {
+	display: none;
+}
+
+.dropdown a {
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	background-color: grey;
+	border-radius: 5px;
+	margin-top: 1%;
+}
+
+.dropdown a:last-child {
+	border-bottom: none;
+	/* Remover a borda inferior do último item */
+}
+
+.dropdown a:hover {
+	background-color: #6c757d;
+}
+
+#maximum_education {
+	display: block;
+}
+
+#minimum_education {
+	display: none;
+}
 
 @media (max-width: 768px) {
 	.container_experience {

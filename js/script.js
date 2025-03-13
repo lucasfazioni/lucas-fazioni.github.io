@@ -987,6 +987,32 @@
 	});
 }());
 
+// dropdown education
+
+function toggleDropdown() {
+	var dropdown = document.getElementById("dropdown");
+	if (dropdown.style.display === "block") {
+		dropdown.style.display = "none";
+	} else {
+		dropdown.style.display = "block";
+	}
+
+	var maximum_education = document.getElementById("maximum_education");
+	if (maximum_education.style.display === "none") {
+		maximum_education.style.display = "block";
+	} else {
+		maximum_education.style.display = "none";
+	}
+
+	var minimum_education = document.getElementById("minimum_education");
+	if (minimum_education.style.display === "block") {
+		minimum_education.style.display = "none";
+	} else {
+		minimum_education.style.display = "block";
+	}
+};
+
+
 // Selection card project or research + Button Show more
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -1132,11 +1158,43 @@ const translations = {
 		show_more_btn: 'Show more',
 
 		// setion 12: My experience
-		trad_my_experience: 'My Experience',
+		trad_my_experience: 'Experience',
 		trad_my_experience_1: 'Data Scientist Mid - Risk & Fraud',
+		trad_time_exp_1: 'Apr 2024 - Present',
+
 		trad_my_experience_2: 'Fraud Prevention Modeling',
+		trad_time_exp_2: 'Sep 2022 - Mar 2024',
+
 		trad_my_experience_3: 'Data Analytics Mid',
-		trad_my_experience_4: 'Fraud Prevention Modeling'
+		trad_time_exp_3: 'Jan 2020 - Dec 2020',
+
+		trad_my_experience_4: 'Fraud Prevention Modeling',
+		trad_time_exp_4: 'Jan 2019 - Dec 2019',
+
+
+		// setion 12: My Education
+		trad_education: 'Education',
+
+		trad_education_1: 'Federal University of Rio Grande do Sul',
+		trad_type_edu_1: "Master's degree (M.Sc.), Computer Science",
+
+		trad_education_2: 'UniRitter University Center Ritter dos Reis',
+		trad_type_edu_2: 'Post-graduation, Data Science',
+
+		trad_education_3: 'UnInter International University Center',
+		trad_type_edu_3: 'Bachelor of Science (B.Sc.), Accounting Sciences',
+
+		trad_education_4: 'Alura',
+		trad_type_edu_4: 'Specialization Courses',
+
+		Course_1: 'Degree Deep Learning',
+		Course_2: 'Degree Machine Learning Advanced',
+		Course_3: 'Degree Natural language processing techniques',
+		Course_4: 'Degree Apache Spark',
+		Course_5: 'Degree Data Engineering with Databricks',
+		Course_6: 'Degree Statistics with Python',
+		Course_7: 'Degree Data Science'
+
 	},
 
 	// --------------------------------------------------------------------
@@ -1234,11 +1292,42 @@ const translations = {
 		show_more_btn: 'Exibir mais',
 
 		// setion 12: My experience
-		trad_my_experience: 'Minhas Experiências',
-		trad_my_experience_1: '',
-		trad_my_experience_2: '',
-		trad_my_experience_3: '',
-		trad_my_experience_4: ''
+		trad_my_experience: 'Experiências',
+
+		trad_my_experience_1: 'Cientista de dados Pleno - Risk & Fraud',
+		trad_time_exp_1: 'Abr 2024 - Atual',
+
+		trad_my_experience_2: 'Analista de modelagem - Risk & Fraud',
+		trad_time_exp_2: 'Set 2022 - Mar 2024',
+
+		trad_my_experience_3: 'Analista de dados Pleno',
+		trad_time_exp_3: 'Jan 2020 - Dez 2020',
+
+		trad_my_experience_4: 'Analista de modelagem - Risk & Fraud',
+		trad_time_exp_4: 'Jan 2019 - Dez 2019',
+
+		// setion 12: My Education
+		trad_education: 'Educação',
+		trad_education_1: 'Universidade Federal do Rio Grande do Sul',
+		trad_time_edu_1: "Mestrado (M.Sc.), Ciência da Computação",
+		// trad_time_edu_1: 'Mar 2025 - Atual',
+
+		trad_education_2: 'Pós-graduação, Ciência de Dados',
+		trad_time_edu_2: 'Ago 2023 - Jul 2024',
+
+		trad_education_3: 'Bacharelado (B.Sc.), Ciências Contábeis',
+		trad_time_edu_3: '2016 - Dez 2022',
+
+		trad_education_4: 'Cursos de Especialização',
+		trad_time_edu_4: 'Fev 2023 - Jan 2024',
+
+		Course_1: 'Formação Deep Learning',
+		Course_2: 'Formação Machine Learning Avançado',
+		Course_3: 'Formação Técnicas de processamento de linguagem natural',
+		Course_4: 'Formação Apache Spark',
+		Course_5: 'Formação Engenharia de dados com Databricks',
+		Course_6: 'Formação Estátisca com Python',
+		Course_7: 'Formação Ciência de Dados'
 	}
 };
 
@@ -1337,10 +1426,44 @@ function changeLanguage(lang) {
 
 	// setion 12: My experience
 	document.getElementById('trad_my_experience').textContent = translations[lang].trad_my_experience;
+
 	document.getElementById('trad_my_experience_1').textContent = translations[lang].trad_my_experience_1;
+	document.getElementById('trad_time_exp_1').textContent = translations[lang].trad_time_exp_1;
+
 	document.getElementById('trad_my_experience_2').textContent = translations[lang].trad_my_experience_2;
+	document.getElementById('trad_time_exp_2').textContent = translations[lang].trad_time_exp_2;
+
 	document.getElementById('trad_my_experience_3').textContent = translations[lang].trad_my_experience_3;
+	document.getElementById('trad_time_exp_3').textContent = translations[lang].trad_time_exp_3;
+
 	document.getElementById('trad_my_experience_4').textContent = translations[lang].trad_my_experience_4;
+	document.getElementById('trad_time_exp_4').textContent = translations[lang].trad_time_exp_4;
+
+
+	//setion 13: My Education
+	document.getElementById('trad_education').textContent = translations[lang].trad_education;
+
+	document.getElementById('trad_education_1').textContent = translations[lang].trad_education_1;
+	document.getElementById('trad_time_edu_1').textContent = translations[lang].trad_time_edu_1;
+
+	document.getElementById('trad_education_2').textContent = translations[lang].trad_education_2;
+	document.getElementById('trad_time_edu_2').textContent = translations[lang].trad_time_edu_2;
+
+	document.getElementById('trad_education_3').textContent = translations[lang].trad_education_3;
+	document.getElementById('trad_time_edu_3').textContent = translations[lang].trad_time_edu_3;
+
+	document.getElementById('trad_education_4').textContent = translations[lang].trad_education_4;
+	document.getElementById('trad_time_edu_4').textContent = translations[lang].trad_time_edu_4;
+
+	document.getElementById('Course_1').textContent = translations[lang].Course_1;
+	document.getElementById('Course_2').textContent = translations[lang].Course_2;
+	document.getElementById('Course_3').textContent = translations[lang].Course_3;
+	document.getElementById('Course_4').textContent = translations[lang].Course_4;
+	document.getElementById('Course_5').textContent = translations[lang].Course_5;
+	document.getElementById('Course_6').textContent = translations[lang].Course_6;
+	document.getElementById('Course_7').textContent = translations[lang].Course_7;
+
+
 }
 
 document.getElementById('language-toggle').addEventListener('change', function () {
