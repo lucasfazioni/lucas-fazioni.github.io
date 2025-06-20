@@ -1144,9 +1144,9 @@ const translations = {
 
 		// <!-- Post 2-->
 		trad_res_description_p2: "Note: ",
-		trad_res_description_details_p2: "Effective data management not only improves operational efficiency but also drives innovation and provides competitive advantage.",
-		trad_res_title_details_p2: "Data Drive Culture",
-		trad_res_date_details_p2: "out 24",
+		trad_res_description_details_p2: "This study presents a comparative analysis of LIME, Grad-CAM, and SHAP methods for explaining predictions in image classification models.",
+		trad_res_title_details_p2: "Explicablility in IA: LIME, SHAP and Grad-CAM",
+		trad_res_date_details_p2: "jun 25",
 		trad_tag_res_p2: 'Research',
 
 
@@ -1289,9 +1289,9 @@ const translations = {
 
 		// <!-- Post 2-->
 		trad_res_description_p2: "Nota: ",
-		trad_res_description_details_p2: "Uma gestão de dados eficaz não apenas melhora a eficiência operacional, mas também impulsiona a inovação e fornece vantagem competitiva.",
-		trad_res_title_details_p2: "Cultura Data Driven",
-		trad_res_date_details_p2: "out 24",
+		trad_res_description_details_p2: " Este estudo apresenta uma análise comparativa dos métodos LIME, Grad-CAM e SHAP para explicar predições em modelosdeclassificação de imagens.",
+		trad_res_title_details_p2: "Explicabilidade em IA: LIME, SHAP e Grad-CAM",
+		trad_res_date_details_p2: "jun 25",
 		trad_tag_res_p2: 'Pesquisas',
 
 
