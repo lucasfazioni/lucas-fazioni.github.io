@@ -1124,17 +1124,17 @@ const translations = {
 
 		// <!-- Post 1-->
 		trad_proj_description_p1: "Note: ",
-		trad_proj_description_details_p1: "Model that predicts results based on independent variables, finding linear relationships in complex data. Look at datelhes in the link.",
+		trad_proj_description_details_p1: "Model that predicts results based on independent variables, finding linear relationships in data.",
 		trad_proj_title_details_p1: "Linear regression model for the financial health of the business",
-		trad_proj_date_details_p1: "ago 24",
+		trad_proj_date_details_p1: "jun 24",
 		trad_tag_proj_p1: 'Projects',
 
 
 		// <!-- Post 3-->
 		trad_proj_description_p3: "Note: ",
-		trad_proj_description_details_p3: "Model that predicts results based on independent variables, finding linear relationships in complex data. Look at datelhes in the link.",
-		trad_proj_title_details_p3: "Linear regression model for the financial health of the business",
-		trad_proj_date_details_p3: "ago 24",
+		trad_proj_description_details_p3: "The study compares the performance between two models: the Support Vector Classifier (SVC), traditionally used in supervised problems, and the Quantum Support Vector Classifier (QSVC) with quantum circuit.",
+		trad_proj_title_details_p3: "Classification with Quantum Learning",
+		trad_proj_date_details_p3: "jul 24",
 		trad_tag_proj_p3: 'Projects',
 
 		// ---------------------------------- //
@@ -1149,6 +1149,13 @@ const translations = {
 		trad_res_date_details_p2: "jun 25",
 		trad_tag_res_p2: 'Research',
 
+
+		// <!-- Post 4-->
+		trad_res_description_p4: "Note: ",
+		trad_res_description_details_p4: "This work presents a Machine Learning-based approach using a Classical-Quantum hybrid architecture for the breast cancer classification task.",
+		trad_res_title_details_p4: "Classical-Quantum hybrid architecture for cancer prediction",
+		trad_res_date_details_p4: "jul 25",
+		trad_tag_res_p4: 'Research',
 
 		// ---------------------------------- //
 		// ---------------------------------- //
@@ -1269,17 +1276,17 @@ const translations = {
 
 		// <!-- Post 1-->
 		trad_proj_description_p1: "Nota: ",
-		trad_proj_description_details_p1: "Modelo que prevê resultados com base em variáveis independentes, encontrando relações lineares em dados complexos. Observe com datelhes no link.",
+		trad_proj_description_details_p1: "Modelo que prevê resultados com base em variáveis independentes, encontrando relações lineares entre os dados.",
 		trad_proj_title_details_p1: "Modelo de regressão linear, para saúde financeira do negócio",
-		trad_proj_date_details_p1: "ago 24",
+		trad_proj_date_details_p1: "jun 24",
 		trad_tag_proj_p1: 'Projetos',
 
 
 		// <!-- Post 3-->
 		trad_proj_description_p3: "Nota: ",
-		trad_proj_description_details_p3: "Modelo que prevê resultados com base em variáveis independentes, encontrando relações lineares em dados complexos. Observe com datelhes no link.",
-		trad_proj_title_details_p3: "Modelo de regressão linear, para saúde financeira do negócio",
-		trad_proj_date_details_p3: "ago 24",
+		trad_proj_description_details_p3: " O estudo compara o desempenho entre dois modelos: o Support Vector Classifier (SVC), tradicionalmente utilizado em problemas supervisionados, e o Quantum Support Vector Classifier (QSVC) com circuito quântico.",
+		trad_proj_title_details_p3: "Classificação com Aprendizado Quântico",
+		trad_proj_date_details_p3: "jul 24",
 		trad_tag_proj_p3: 'Projetos',
 
 		// ---------------------------------- //
@@ -1289,11 +1296,17 @@ const translations = {
 
 		// <!-- Post 2-->
 		trad_res_description_p2: "Nota: ",
-		trad_res_description_details_p2: " Este estudo apresenta uma análise comparativa dos métodos LIME, Grad-CAM e SHAP para explicar predições em modelosdeclassificação de imagens.",
+		trad_res_description_details_p2: "Este estudo apresenta uma análise comparativa dos métodos LIME, Grad-CAM e SHAP para explicar predições em modelosdeclassificação de imagens.",
 		trad_res_title_details_p2: "Explicabilidade em IA: LIME, SHAP e Grad-CAM",
 		trad_res_date_details_p2: "jun 25",
 		trad_tag_res_p2: 'Pesquisas',
 
+		// <!-- Post 4-->
+		trad_res_description_p4: "Nota: ",
+		trad_res_description_details_p4: "Este trabalho apresenta uma abordagem baseada em aprendizado de máquina usando uma arquitetura híbrida clássica-quântica para a tarefa de classificação do câncer de mama.",
+		trad_res_title_details_p4: "Arquitetura híbrida Classica-Quântica, para predição de cancer",
+		trad_res_date_details_p4: "jul 25",
+		trad_tag_res_p4: 'Pesquisas',
 
 		// ---------------------------------- //
 		// ---------------------------------- //
@@ -1438,6 +1451,12 @@ function changeLanguage(lang) {
 	document.getElementById('trad_res_description_p2').textContent = translations[lang].trad_res_description_p2;
 	document.getElementById('trad_tag_res_p2').textContent = translations[lang].trad_tag_res_p2;
 
+	// <!-- Post 4-->
+	document.getElementById('trad_res_description_details_p4').textContent = translations[lang].trad_res_description_details_p4;
+	document.getElementById('trad_res_title_details_p4').textContent = translations[lang].trad_res_title_details_p4;
+	document.getElementById('trad_res_date_details_p4').textContent = translations[lang].trad_res_date_details_p4;
+	document.getElementById('trad_res_description_p4').textContent = translations[lang].trad_res_description_p4;
+	document.getElementById('trad_tag_res_p4').textContent = translations[lang].trad_tag_res_p4;
 
 	// ---------------------------------- //
 	// ---------------------------------- //
