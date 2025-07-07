@@ -1514,6 +1514,20 @@ function changeLanguage(lang) {
 	// setion 13: Contact Me - Button - Send
 	document.getElementById('show_more_btn2').textContent = translations[lang].show_more_btn2;
 
+	// Função para alterar o idioma e atualizar o link de download
+
+	const downloadLink = document.getElementById('download_style');
+	if (downloadLink) {
+		let newHref = `./doc/${lang}/Lucas Fazioni - CV.pdf`;
+		downloadLink.setAttribute('href', newHref);
+	}
+
+	const downloadLink_1 = document.getElementById('download_style_1');
+	if (downloadLink_1) {
+		let newHref = `./doc/${lang}/Lucas Fazioni - CV.pdf`;
+		downloadLink_1.setAttribute('href', newHref);
+	}
+
 }
 
 document.getElementById('language-toggle').addEventListener('change', function () {
@@ -1524,3 +1538,9 @@ document.getElementById('language-toggle').addEventListener('change', function (
 	}
 });
 
+
+// Define idioma padrão ao carregar a página
+window.addEventListener('DOMContentLoaded', () => {
+	// Aplica o idioma 'en' logo no início
+	changeLanguage('pt'); //invertido
+});

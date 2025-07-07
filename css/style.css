@@ -2180,7 +2180,8 @@ hr {
 	position: relative;
 	overflow: hidden;
 	display: inline-block;
-	padding: 15px 39px;
+	padding: 13px 15px;
+	padding-right: 5%;
 	font-size: 14px;
 	line-height: 1.25;
 	border: 1px solid;
