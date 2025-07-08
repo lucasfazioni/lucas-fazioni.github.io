@@ -239,7 +239,7 @@
           <div id="skills_ajustes">
             <!-- Box Creative-->
             <!-- python -->
-            <div id="skill-card-text">
+            <div id="skill-card-text" onclick="openOverlay('Python')">
               <div class="skill-item">
                 <div class="skill-inner">
                   <div class="icon-box">
@@ -252,7 +252,7 @@
             </div>
 
             <!-- spark -->
-            <div id="skill-card-text">
+            <div id="skill-card-text" onclick="openOverlay('Spark')">
               <div class="skill-item">
                 <div class="skill-inner">
                   <div class="icon-box">
@@ -265,7 +265,7 @@
             </div>
 
             <!-- R -->
-            <div id="skill-card-text">
+            <div id="skill-card-text" onclick="openOverlay('R Statistic')">
               <div class="skill-item">
                 <div class="skill-inner">
                   <div class="icon-box">
@@ -278,7 +278,7 @@
             </div>
 
             <!-- Databricks -->
-            <div id="skill-card-text">
+            <div id="skill-card-text" onclick="openOverlay('Databricks')">
               <div class="skill-item">
                 <div class="skill-inner">
                   <div class="icon-box">
@@ -291,7 +291,7 @@
             </div>
 
             <!-- AWS -->
-            <div id="skill-card-text">
+            <div id="skill-card-text" onclick="openOverlay('Cloud AWS')">
               <div class="skill-item">
                 <div class="skill-inner">
                   <div class="icon-box">
@@ -304,7 +304,7 @@
             </div>
 
             <!-- Tableau -->
-            <div id="skill-card-text">
+            <div id="skill-card-text" onclick="openOverlay('Tableau')">
               <div class="skill-item">
                 <div class="skill-inner">
                   <div class="icon-box">
@@ -317,7 +317,7 @@
             </div>
 
             <!-- Power BI -->
-            <div id="skill-card-text">
+            <div id="skill-card-text" onclick="openOverlay('Power BI')">
               <div class="skill-item">
                 <div class="skill-inner">
                   <div class="icon-box">
@@ -328,6 +328,13 @@
               </div>
               <p>Power BI</p>
             </div>
+          </div>
+        </div>
+        <div id="overlay" class="overlay">
+          <div class="overlay-content">
+            <span class="close-btn" onclick="closeOverlay()">×</span>
+            <h4 id="overlay-title">Ferramenta</h4>
+            <ul id="overlay-list"></ul>
           </div>
         </div>
     </section>
@@ -444,7 +451,8 @@
         <div class="row row-30">
           <!-- Post 1 -- Project -->
           <div class="col-sm-6 col-md-4 col-lg-3 wow-outer cards_filter" data-category="project">
-            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#">
+            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media"
+                href="./project/linear_regression_business.html">
                 <div class='card'>
                   <img src="images/img_projects/post_1.png">
                   <div class='info'>
@@ -456,9 +464,10 @@
                     </p>
                   </div>
                 </div>
-                <h5 class="post-tiny-title" id="trad_proj_title_details_p1"><a target="_blank"
-                    href="./project/linear_regression_business.html">Linear regression model for the
-                    financial health of the business</a></h5>
+                <a id="trad_proj_title_details_p1" class="title_config_proj_rese post-tiny-title"
+                  href="./project/linear_regression_business.html" target="_blank">
+                  Linear regression model for the financial health of the business
+                </a>
                 <div class="ajuste_tag">
                   <p class="post-tiny-time" id="trad_proj_date_details_p1">jun 25</p>
                   <p class="tag_proj" id="trad_tag_proj_p1">Project</p>
@@ -467,7 +476,8 @@
           </div>
           <!-- Post 2 -- Research -->
           <div class="col-sm-6 col-md-4 col-lg-3 wow-outer cards_filter" data-category="research">
-            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#">
+            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" target="_blank"
+                href="./article/IA_EXPLICAVEL_EM_REDES_NEURAIS_CONVOLUCIONAIS_GRAD-CAM_LIME_SHAP.pdf">
                 <div class='card'>
                   <img src="images/img_research/article_1.png">
                   <div class='info'>
@@ -478,10 +488,10 @@
                     </p>
                   </div>
                 </div>
-                <h5 class="post-tiny-title" id="trad_res_title_details_p2"><a target="_blank"
-                    href="./article/IA_EXPLICAVEL_EM_REDES_NEURAIS_CONVOLUCIONAIS_GRAD-CAM_LIME_SHAP.pdf">Explicablility
-                    in IA: LIME, SHAP
-                    and Grad-CAM</a></h5>
+                <a id="trad_res_title_details_p2" class="title_config_proj_rese post-tiny-title" target="_blank"
+                  href="./article/IA_EXPLICAVEL_EM_REDES_NEURAIS_CONVOLUCIONAIS_GRAD-CAM_LIME_SHAP.pdf">Explicablility
+                  in IA: LIME, SHAP
+                  and Grad-CAM</a>
                 <div class="ajuste_tag">
                   <p class="post-tiny-time" id="trad_res_date_details_p2">jun 25</p>
                   <p class="tag_pesq" id="trad_tag_res_p2">Research</p>
@@ -490,7 +500,8 @@
           </div>
           <!-- Post 3 -- Project -->
           <div class="col-sm-6 col-md-4 col-lg-3 wow-outer cards_filter" data-category="project">
-            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#">
+            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" target="_blank"
+                href="./project/project_quantum_classical_classifier.html">
                 <div class='card'>
                   <img src="images/img_projects/post_2.png">
                   <div class='info'>
@@ -502,9 +513,8 @@
                     </p>
                   </div>
                 </div>
-                <h5 class="post-tiny-title" id="trad_proj_title_details_p3"><a target="_blank"
-                    href="./project/project_quantum_classical_classifier.html">Classification with Quantum Learning</a>
-                </h5>
+                <a class="title_config_proj_rese post-tiny-title" id="trad_proj_title_details_p3" target="_blank"
+                  href="./project/project_quantum_classical_classifier.html">Classification with Quantum Learning</a>
                 <div class="ajuste_tag">
                   <p class="post-tiny-time" id="trad_proj_date_details_p3">jul 25</p>
                   <p class="tag_proj" id="trad_tag_proj_p3">Project</p>
@@ -513,7 +523,8 @@
           </div>
           <!-- Post 4 -- Research -->
           <div class="col-sm-6 col-md-4 col-lg-3 wow-outer cards_filter" data-category="research">
-            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#">
+            <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" target="_blank"
+                href="./article/Quantum_Classical_Breast_Cancer_Classication.pdf">
                 <div class='card'>
                   <img src="images/img_research/article_2.png">
                   <div class='info'>
@@ -524,9 +535,9 @@
                     </p>
                   </div>
                 </div>
-                <h5 class="post-tiny-title" id="trad_res_title_details_p4"><a target="_blank"
-                    href="./article/Quantum_Classical_Breast_Cancer_Classication.pdf">Classical-quantum hybrid
-                    architecture for cancer prediction</a></h5>
+                <a class="title_config_proj_rese post-tiny-title" id="trad_res_title_details_p4" target="_blank"
+                  href="./article/Quantum_Classical_Breast_Cancer_Classication.pdf">Classical-quantum hybrid
+                  architecture for cancer prediction</a>
                 <div class="ajuste_tag">
                   <p class="post-tiny-time" id="trad_res_date_details_p4">jul 25</p>
                   <p class="tag_pesq" id="trad_tag_res_p4">Research</p>

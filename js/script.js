@@ -1517,14 +1517,15 @@ function changeLanguage(lang) {
 	// Função para alterar o idioma e atualizar o link de download
 
 	const downloadLink = document.getElementById('download_style');
-	if (downloadLink) {
-		let newHref = `./doc/${lang}/Lucas Fazioni - CV.pdf`;
+	// Só atualiza se encontrar o elemento com o ID exato
+	if (downloadLink && downloadLink.tagName === 'A') {
+		const newHref = `./doc/${lang}/Lucas Fazioni - CV.pdf`;
 		downloadLink.setAttribute('href', newHref);
 	}
 
 	const downloadLink_1 = document.getElementById('download_style_1');
-	if (downloadLink_1) {
-		let newHref = `./doc/${lang}/Lucas Fazioni - CV.pdf`;
+	if (downloadLink_1 && downloadLink_1.tagName === 'A') {
+		const newHref = `./doc/${lang}/Lucas Fazioni - CV.pdf`;
 		downloadLink_1.setAttribute('href', newHref);
 	}
 
@@ -1538,9 +1539,61 @@ document.getElementById('language-toggle').addEventListener('change', function (
 	}
 });
 
+// tradução skill view add
+
+const translations_skill = {
+	pt: {
+		skillsInfo: {
+			"Python": ["Data manipulation", "Automation", "Machine Learning"],
+			"Spark": ["Distributed processing", "Parallel jobs", "DataFrames"],
+			"R Statistic": ["Statistical modeling", "ggplot2 visualization", "Exploratory analysis"],
+			"Databricks": ["Integrated notebooks", "Data pipeline", "Spark integration"],
+			"Cloud AWS": ["S3, EC2, Lambda", "Cloud infrastructure", "AI integration"],
+			"Tableau": ["Interactive visualizations", "Enterprise dashboards", "Connection to varied sources"],
+			"Power BI": ["Dynamic charts", "DAX measures", "Optimized reports"]
+		}
+	},
+
+	en: {
+		skillsInfo: {
+			"Python": ["Manipulação de dados", "Automação", "Machine Learning"],
+			"Spark": ["Processamento distribuído", "Trabalhos paralelos", "DataFrames"],
+			"R Statistic": ["Modelagem estatística", "Visualizações com ggplot2", "Análise exploratória"],
+			"Databricks": ["Notebooks integrados", "Pipeline de dados", "Integração com Spark"],
+			"Cloud AWS": ["S3, EC2, Lambda", "Infraestrutura em nuvem", "Integração com AI"],
+			"Tableau": ["Visualizações interativas", "Dashboard empresarial", "Conexão com fontes variadas"],
+			"Power BI": ["Gráficos dinâmicos", "Medidas DAX", "Relatórios otimizados"]
+		}
+	}
+};
+
+// function view caracteristics skills
+
+function openOverlay(skillName) {
+	const currentLang = document.getElementById('language-toggle').checked ? 'en' : 'pt';
+	const details = translations_skill[currentLang].skillsInfo[skillName];
+
+	document.getElementById('overlay-title').textContent = skillName;
+	const list = document.getElementById('overlay-list');
+	list.innerHTML = '';
+
+	details.forEach(item => {
+		const li = document.createElement('li');
+		li.textContent = item;
+		list.appendChild(li);
+	});
+
+	document.getElementById('overlay').classList.add('active');
+}
+
+function closeOverlay() {
+	document.getElementById('overlay').classList.remove('active');
+}
+
 
 // Define idioma padrão ao carregar a página
 window.addEventListener('DOMContentLoaded', () => {
 	// Aplica o idioma 'en' logo no início
 	changeLanguage('pt'); //invertido
 });
+
