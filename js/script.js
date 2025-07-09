@@ -1546,7 +1546,7 @@ const translations_skill = {
 		skillsInfo: {
 			"Python": ["Data manipulation", "Automation", "Machine Learning"],
 			"Spark": ["Distributed processing", "Parallel jobs", "DataFrames"],
-			"R Statistic": ["Statistical modeling", "ggplot2 visualization", "Exploratory analysis"],
+			"R Studio": ["Statistical modeling", "ggplot2 visualization", "Exploratory analysis"],
 			"Databricks": ["Integrated notebooks", "Data pipeline", "Spark integration"],
 			"Cloud AWS": ["S3, EC2, Lambda", "Cloud infrastructure", "AI integration"],
 			"Tableau": ["Interactive visualizations", "Enterprise dashboards", "Connection to varied sources"],
@@ -1558,7 +1558,7 @@ const translations_skill = {
 		skillsInfo: {
 			"Python": ["Manipulação de dados", "Automação", "Machine Learning"],
 			"Spark": ["Processamento distribuído", "Trabalhos paralelos", "DataFrames"],
-			"R Statistic": ["Modelagem estatística", "Visualizações com ggplot2", "Análise exploratória"],
+			"R Studio": ["Modelagem estatística", "Visualizações com ggplot2", "Análise exploratória"],
 			"Databricks": ["Notebooks integrados", "Pipeline de dados", "Integração com Spark"],
 			"Cloud AWS": ["S3, EC2, Lambda", "Infraestrutura em nuvem", "Integração com AI"],
 			"Tableau": ["Visualizações interativas", "Dashboard empresarial", "Conexão com fontes variadas"],
