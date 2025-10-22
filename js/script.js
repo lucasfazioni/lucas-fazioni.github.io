@@ -1083,18 +1083,18 @@ const translations = {
 		btn_download: "Download CV",
 
 		// setion 4: Features
-		trad_features1: "Science & Analytics",
+		trad_features1: "Analytics & Data Science",
 		trad_features2: "With advanced features, I help companies define the best direction, using analytics and data science to create a successful business.",
 
 		trad_features3: "Management",
 		trad_features4: "With strong strategic skills, I work in project management and governance throughout the analytics steps. I have excellent communication skills and articulate technical concepts with clarity and objectivity.",
 
-		trad_features5: "Bank",
+		trad_features5: "Financial Modelling",
 		trad_features6: "With experience in banking and acquiring, I provide specialized solutions that can ensure higher profits for the business with the application of advanced ML and AI techniques.",
 
 		// setion 5: About Me
 		trad_about: "About Me",
-		trad_about2: "I currently work as a Data Scientist at Banco Sicredi, a Brazilian financial institution with 8+ million customers. Previously, I was in positions of Data Analyst and Risk Modeling Analyst at Getnet Brasil S.A, working with a focus on strategic planning in the CRM and Fraud Prevention areas. In the academic environment, I am studying the Master's program in Computer Science, working in the research line of Algorithms and Optimization, but I also have a postgraduate degree in Data Science and a bachelor's degree in Accounting Sciences.",
+		trad_about2: "I currently work as a Senior Data Scientist at Banco Sicredi, a Brazilian financial institution with 10+ million customers. Previously, I was in positions of Data Analyst and Risk Modeling Analyst at Getnet Brasil S.A, working with a focus on strategic planning in the CRM and Fraud Prevention areas. In the academic environment, I am studying the Master's program in Computer Science, working in the research line of Algorithms and Optimization, but I also have a postgraduate degree in Data Science and a bachelor's degree in Accounting Sciences.",
 
 		// setion 6: About Me - Icons
 		trad_about_icon1: "Years of Experience",
@@ -1107,6 +1107,9 @@ const translations = {
 		// setion 8: My skills
 		trad_skills: "My Skills",
 		trad_skills2: "Since the beginning of my journey with big data, I have acquired some skills. Below are some statistics that represent the level of understanding and utilization of the tools as a percentage.",
+
+		trad_skills_title_1: "Usability and Applications",
+		trad_skills_title_2: "Functions, methods and resources used",
 
 		// setion 9: Projects and Research - Title
 		trad_project_research: 'Projects and Research',
@@ -1167,7 +1170,7 @@ const translations = {
 		// setion 12: My experience
 		trad_my_experience: 'Experience',
 		trad_my_experience_1: 'Data Scientist Mid - Risk & Fraud',
-		trad_time_exp_1: 'Apr 2024 - Present',
+		trad_time_exp_1: 'Apr 2024 - Sep 2025',
 
 		trad_my_experience_2: 'Fraud Prevention Modeling',
 		trad_time_exp_2: 'Sep 2022 - Mar 2024',
@@ -1178,6 +1181,8 @@ const translations = {
 		trad_my_experience_4: 'Fraud Prevention Modeling',
 		trad_time_exp_4: 'Jan 2019 - Dec 2019',
 
+		trad_my_experience_5: 'Data Scientist Senior - Risk & Fraud',
+		trad_time_exp_5: 'Oct 2025 - Present',
 
 		// setion 12: My Education
 		trad_education: 'Education',
@@ -1235,13 +1240,13 @@ const translations = {
 		btn_download: "Baixe CV",
 
 		// setion 4: Features
-		trad_features1: "Ciência & Análise",
+		trad_features1: "Análise & Ciência de Dados",
 		trad_features2: "Com caracteristicas avançadas, ajudo empresas a definir a melhor direção, com o uso da análise e ciência de dados para criar um negócios bem sucedidos.",
 
-		trad_features3: "Gestão",
+		trad_features3: "Liderança",
 		trad_features4: "Com fortes habilidades estratégicas, atuo em gestão de projetos e governança em toda as steps de analytics. Possuo excelentes habilidades de comunicação e articulo conceitos técnicos com clareza e objetividade.",
 
-		trad_features5: "Bancária",
+		trad_features5: "Modelagem Financeira",
 		trad_features6: "Com experiência bancária e adquirência, forneço soluções especializadas que podem garantir maiores lucros para o negócio com a aplicação de técnicas avançadas de ML e IA.",
 
 		// setion 5: About Me
@@ -1259,6 +1264,9 @@ const translations = {
 		// setion 8: My skills
 		trad_skills: "Minhas Habilidades",
 		trad_skills2: "Desde o início da minha jornada com big data, adqueri algumas habilidades. Abaixo estão algumas estatísticas que representam o nível de entendimento e utilização das ferramentas percentualmente.",
+
+		trad_skills_title_1: "Usabilidade e Aplicações",
+		trad_skills_title_2: "Funções, métodos e recursos utilizados",
 
 		// setion 9: Projects and Research - Title
 		trad_project_research: 'Projetos e Pesquisas',
@@ -1318,7 +1326,7 @@ const translations = {
 		trad_my_experience: 'Experiências',
 
 		trad_my_experience_1: 'Cientista de dados Pleno - Risk & Fraud',
-		trad_time_exp_1: 'Abr 2024 - Atual',
+		trad_time_exp_1: 'Abr 2024 - Set 2025',
 
 		trad_my_experience_2: 'Analista de modelagem - Risk & Fraud',
 		trad_time_exp_2: 'Set 2022 - Mar 2024',
@@ -1328,6 +1336,9 @@ const translations = {
 
 		trad_my_experience_4: 'Analista de modelagem - Risk & Fraud',
 		trad_time_exp_4: 'Jan 2019 - Dez 2019',
+
+		trad_my_experience_5: 'Cientista de dados Senior - Risk & Fraud',
+		trad_time_exp_5: 'Out 2025 - Atual',
 
 		// setion 12: My Education
 		trad_education: 'Educação',
@@ -1411,6 +1422,9 @@ function changeLanguage(lang) {
 	document.getElementById('trad_skills').textContent = translations[lang].trad_skills;
 	document.getElementById('trad_skills2').textContent = translations[lang].trad_skills2;
 
+	document.getElementById('trad_skills_title_1').textContent = translations[lang].trad_skills_title_1;
+	document.getElementById('trad_skills_title_2').textContent = translations[lang].trad_skills_title_2;
+
 	// setion 9: Projects and Research - Title
 	document.getElementById('trad_project_research').textContent = translations[lang].trad_project_research;
 
@@ -1479,6 +1493,8 @@ function changeLanguage(lang) {
 	document.getElementById('trad_my_experience_4').textContent = translations[lang].trad_my_experience_4;
 	document.getElementById('trad_time_exp_4').textContent = translations[lang].trad_time_exp_4;
 
+	document.getElementById('trad_my_experience_5').textContent = translations[lang].trad_my_experience_5;
+	document.getElementById('trad_time_exp_5').textContent = translations[lang].trad_time_exp_5;
 
 	//setion 13: My Education
 	document.getElementById('trad_education').textContent = translations[lang].trad_education;
@@ -1539,56 +1555,66 @@ document.getElementById('language-toggle').addEventListener('change', function (
 	}
 });
 
-// tradução skill view add
 
-const translations_skill = {
-	pt: {
-		skillsInfo: {
-			"Python": ["Data manipulation", "Automation", "Machine Learning"],
-			"Spark": ["Distributed processing", "Parallel jobs", "DataFrames"],
-			"R Studio": ["Statistical modeling", "ggplot2 visualization", "Exploratory analysis"],
-			"Databricks": ["Integrated notebooks", "Data pipeline", "Spark integration"],
-			"Cloud AWS": ["S3, EC2, Lambda", "Cloud infrastructure", "AI integration"],
-			"Tableau": ["Interactive visualizations", "Enterprise dashboards", "Connection to varied sources"],
-			"Power BI": ["Dynamic charts", "DAX measures", "Optimized reports"]
+// // Overlay model skills - modal databricks
+
+// const databricksCard = document.getElementById('databricksCard');
+// const databricksModal = document.getElementById('databricksModal');
+// const closeModalBtn = document.getElementById('closeModalBtn');
+
+// // Função para mostrar o modal
+// databricksCard.addEventListener('click', () => {
+// 	databricksModal.style.display = 'flex';
+// });
+
+// // Função para esconder o modal ao clicar no X
+// closeModalBtn.addEventListener('click', () => {
+// 	databricksModal.style.display = 'none';
+// });
+
+// // Função para esconder o modal ao clicar fora dele (no overlay)
+// databricksModal.addEventListener('click', (event) => {
+// 	if (event.target === databricksModal) {
+// 		databricksModal.style.display = 'none';
+// 	}
+// });
+
+// ===== Generic Modal Handler for All Skill Cards =====
+
+// Select all cards and all modals
+const skillCards = document.querySelectorAll('.skill-card');
+const modals = document.querySelectorAll('.modal-overlay');
+
+// Add click event for each skill card
+skillCards.forEach(card => {
+	card.addEventListener('click', () => {
+		const cardId = card.id; // e.g. "databricksCard"
+		const modalId = cardId.replace('Card', 'Modal'); // e.g. "databricksModal"
+		const modal = document.getElementById(modalId);
+		if (modal) {
+			modal.style.display = 'flex';
 		}
-	},
-
-	en: {
-		skillsInfo: {
-			"Python": ["Manipulação de dados", "Automação", "Machine Learning"],
-			"Spark": ["Processamento distribuído", "Trabalhos paralelos", "DataFrames"],
-			"R Studio": ["Modelagem estatística", "Visualizações com ggplot2", "Análise exploratória"],
-			"Databricks": ["Notebooks integrados", "Pipeline de dados", "Integração com Spark"],
-			"Cloud AWS": ["S3, EC2, Lambda", "Infraestrutura em nuvem", "Integração com AI"],
-			"Tableau": ["Visualizações interativas", "Dashboard empresarial", "Conexão com fontes variadas"],
-			"Power BI": ["Gráficos dinâmicos", "Medidas DAX", "Relatórios otimizados"]
-		}
-	}
-};
-
-// function view caracteristics skills
-
-function openOverlay(skillName) {
-	const currentLang = document.getElementById('language-toggle').checked ? 'en' : 'pt';
-	const details = translations_skill[currentLang].skillsInfo[skillName];
-
-	document.getElementById('overlay-title').textContent = skillName;
-	const list = document.getElementById('overlay-list');
-	list.innerHTML = '';
-
-	details.forEach(item => {
-		const li = document.createElement('li');
-		li.textContent = item;
-		list.appendChild(li);
 	});
+});
 
-	document.getElementById('overlay').classList.add('active');
-}
+// Add close functionality for all modals
+modals.forEach(modal => {
+	const closeBtn = modal.querySelector('.modal-close-btn');
 
-function closeOverlay() {
-	document.getElementById('overlay').classList.remove('active');
-}
+	// Close when clicking the X button
+	if (closeBtn) {
+		closeBtn.addEventListener('click', () => {
+			modal.style.display = 'none';
+		});
+	}
+
+	// Close when clicking outside modal content
+	modal.addEventListener('click', (event) => {
+		if (event.target === modal) {
+			modal.style.display = 'none';
+		}
+	});
+});
 
 
 // Define idioma padrão ao carregar a página

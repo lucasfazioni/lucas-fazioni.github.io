@@ -2043,6 +2043,116 @@ hr {
 }
 
 
+/* ------------------------- Modal Styles ------------------------- */
+
+
+
+/* Overlay escurecido */
+.modal-overlay {
+	display: none;
+	/* Inicialmente escondido */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(50, 50, 50, 73%);
+	/* Fundo semi-transparente */
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Conteúdo principal do modal */
+.modal-content {
+	/* background-color: rgba(50, 50, 50, 73%); */
+	background-color: #373535;
+	color: white;
+	border-radius: 8px;
+	padding: 30px;
+	width: 80%;
+	max-height: min-content;
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+	position: relative;
+	animation: fadeIn 0.3s ease-out;
+}
+
+/* Animação de entrada do modal */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* Botão de fechar (X) */
+.modal-close-btn {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	font-size: 24px;
+	font-weight: bold;
+	color: var(--cor-texto-modal);
+	cursor: pointer;
+	border: none;
+	background: none;
+	line-height: 1;
+	padding: 5px;
+}
+
+.modal-close-btn:hover {
+	color: #ff5555;
+}
+
+.modal-header h3 {
+	font-size: 1.8em;
+	/* border-bottom: 2px solid white; */
+	color: white;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Estilo da tabela dentro do modal */
+.modal-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 5px;
+}
+
+.modal-table th,
+.modal-table td {
+	padding: 7px;
+	text-align: left;
+	border: 0.5px solid rgb(255 254 254 / 8%);
+	color: white;
+	font-size: 12px;
+}
+
+.sub_title {
+	font-weight: bold;
+	color: white;
+	/* Destaque para subtítulos */
+}
+
+.modal-table th {
+	background-color: #53545a;
+	font-weight: bold;
+	color: #f8f8f2;
+	font-size: x-large;
+}
+
+.modal-table em {
+	font-style: normal;
+	font-weight: bold;
+	color: white;
+	/* Destaque para termos-chave */
+}
+
 /*
 *
 * Container Skills
@@ -2111,6 +2221,7 @@ hr {
 	padding-bottom: 10px;
 	filter: grayscale(100%) opacity(0.70);
 	transition: filter 0.5s;
+	max-width: 160%;
 }
 
 .skill-item:hover .icon-box img {
@@ -15189,13 +15300,13 @@ button.swiper-pagination-bullet {
 
 	.modal-header,
 	.modal-body {
-		padding-left: 30px;
-		padding-right: 30px;
+		/* padding-left: 30px; */
+		padding-right: 10px;
 	}
 
 	.modal-header {
-		padding-top: 20px;
-		padding-bottom: 20px;
+		/* padding-top: 20px; */
+		padding-bottom: 10px;
 	}
 
 	.modal-body {

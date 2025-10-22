@@ -116,7 +116,7 @@
           </div>
         </div>
         <div class="image-container">
-          <img src="images/foto_perfil_3.png" alt="Imagem Rotativa">
+          <img src="images/foto_perfil_3.jpeg" alt="Imagem Rotativa">
         </div>
       </div>
     </section>
@@ -129,7 +129,7 @@
             <article class="box-minimal">
               <div class="box-minimal-icon linearicons-pie-chart wow fadeIn"></div>
               <div class="box-minimal-main wow-outer">
-                <h4 class="box-minimal-title wow slideInDown" id="trad_features1">Science & Analytics</h4>
+                <h4 class="box-minimal-title wow slideInDown" id="trad_features1">Analytics & Data Science</h4>
                 <p class="wow fadeInUpSmall" id="trad_features2">With advanced features, I help companies define the
                   best direction, using analytics and data science to create a successful business.</p>
               </div>
@@ -152,7 +152,8 @@
             <article class="box-minimal">
               <div class="box-minimal-icon linearicons-credit-card wow fadeIn" data-wow-delay=".2s"></div>
               <div class="box-minimal-main wow-outer">
-                <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".2s" id="trad_features5">Bank</h4>
+                <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".2s" id="trad_features5">Financial
+                  Modelling</h4>
                 <p class="wow fadeInUpSmall" data-wow-delay=".2s" id="trad_features6">With experience in banking and
                   acquiring, I provide specialized solutions that can ensure higher profits for the business with the
                   application of
@@ -168,8 +169,8 @@
       <div class="container">
         <h3 class="wow-outer" id="trad_about"><span id='title-text' class="wow slideInUp">About Me</span></h3>
         <p class="wow-outer"><span class="text-width-1 wow slideInDown" id="trad_about2" style="margin-bottom:2.5%">I
-            currently work as a Data
-            Scientist at Banco Sicredi, a Brazilian financial institution with 8+ million customers. Previously, I was
+            currently work as a Senior Data Scientist at Banco Sicredi, a Brazilian financial institution with 10+
+            million customers. Previously, I was
             in positions of Data Analyst and Risk Modeling Analyst at Getnet Brasil S.A, working with a focus on
             strategic planning in the CRM and Fraud Prevention areas. In the academic environment, I am studying the
             Master's program in Computer Science, working in the research line of Algorithms and Optimization, but I
@@ -178,7 +179,7 @@
           <div class="container_about">
             <div class="stat">
               <img src="images/icon_about_experience.svg" style=" width: 4em; margin: 5%;">
-              <div class="number_icon">5+</div>
+              <div class="number_icon">6+</div>
               <div class="text">
                 <h5 class="counter-minimal-title" id="trad_about_icon1">Years of Experience</h5>
               </div>
@@ -192,7 +193,7 @@
             </div>
             <div class="stat">
               <img src="images/icon_about_code.svg" style="width: 3.5em; margin: 5%;">
-              <div class="number_icon">4</div>
+              <div class="number_icon">5</div>
               <div class="text">
                 <h5 class="counter-minimal-title" id="trad_about_icon2">Programming Languages</h5>
               </div>
@@ -238,13 +239,13 @@
         <div class="row row-30">
           <div id="skills_ajustes">
             <!-- Box Creative-->
-            <!-- python -->
-            <div id="skill-card-text" onclick="openOverlay('Python')">
-              <div class="skill-item">
+            <!-- PYTHON -->
+            <div id="skill-card-text">
+              <div class="skill-item skill-card python" id="pythonCard">
                 <img src="./images/icon_click.svg" alt="">
                 <div class="skill-inner">
                   <div class="icon-box">
-                    <img src="./images/python.svg" alt="">
+                    <img src="./images/python.svg" alt="Python icon">
                   </div>
                   <div class="number">99%</div>
                 </div>
@@ -252,27 +253,177 @@
               <p>Python</p>
             </div>
 
+            <div class="modal-overlay" id="pythonModal">
+              <div class="modal-content">
+                <button class="modal-close-btn" id="closePythonModalBtn">&times;</button>
+
+                <div class="modal-header">
+                  <h3>Python</h3>
+                </div>
+
+                <table class="modal-table">
+                  <thead>
+                    <tr>
+                      <th id='trad_skills_title_1'>Main Applications</th>
+                      <th id='trad_skills_title_2'>Functions, methods and resources used</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="sub_title">Data Analysis and Manipulation</td>
+                      <td>Use libraries such as <em>Pandas</em> and <em>NumPy</em> to import, clean, and manipulate
+                        large volumes of structured and unstructured data.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Machine Learning and AI</td>
+                      <td>Build predictive models with <em>Scikit-learn</em>, <em>TensorFlow</em>, and <em>PyTorch</em>;
+                        perform hyperparameter tuning and cross-validation.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">ETL and Automation</td>
+                      <td>Develop automated ETL pipelines using <em>Airflow</em>, <em>Luigi</em>, or custom Python
+                        scripts.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Data Visualization</td>
+                      <td>Create interactive visualizations using <em>Matplotlib</em>, <em>Seaborn</em>, and
+                        <em>Plotly</em>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Data Integration and APIs</td>
+                      <td>Connect to systems and consume RESTful APIs for data ingestion and integration.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
             <!-- spark -->
-            <div id="skill-card-text" onclick="openOverlay('Spark')">
-              <div class="skill-item">
+            <!-- APACHE SPARK (PYSPARK) -->
+            <div id="skill-card-text">
+              <div class="skill-item skill-card spark" id="sparkCard">
                 <img src="./images/icon_click.svg" alt="">
                 <div class="skill-inner">
                   <div class="icon-box">
-                    <img src="./images/spark.svg" alt="">
+                    <img src="./images/spark.svg" alt="Spark icon">
                   </div>
                   <div class="number">88%</div>
                 </div>
               </div>
-              <p>Spark</p>
+              <p>PySpark</p>
             </div>
 
-            <!-- R -->
-            <div id="skill-card-text" onclick="openOverlay('R Studio')">
-              <div class="skill-item">
+            <div class="modal-overlay" id="sparkModal">
+              <div class="modal-content">
+                <button class="modal-close-btn" id="closeSparkModalBtn">&times;</button>
+
+                <div class="modal-header">
+                  <h3>PySpark</h3>
+                </div>
+
+                <table class="modal-table">
+                  <thead>
+                    <tr>
+                      <th id='trad_skills_title_1'>Main Applications</th>
+                      <th id='trad_skills_title_2'>Functions, methods and resources used</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="sub_title">Distributed Data Processing</td>
+                      <td>Use <em>RDDs</em> and <em>DataFrames</em> to handle massive datasets in parallel across
+                        distributed clusters.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Large-Scale ETL</td>
+                      <td>Perform data cleaning and transformation efficiently with native scalability; integrate with
+                        <em>Hadoop</em> and <em>Delta Lake</em>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Machine Learning at Scale</td>
+                      <td>Apply ML algorithms for classification, regression, and clustering using <em>MLlib</em>.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Multi-Language Integration</td>
+                      <td>Native support for <em>Python, Scala, R</em>, and <em>SQL</em> for unified data analysis.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Real-Time Data Streaming</td>
+                      <td>Process continuous data streams with <em>Structured Streaming</em> for near-real-time
+                        analytics.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- SQL -->
+            <div id="skill-card-text">
+              <div class="skill-item skill-card sql" id="sqlCard">
                 <img src="./images/icon_click.svg" alt="">
                 <div class="skill-inner">
                   <div class="icon-box">
-                    <img src="./images/R.svg" alt="">
+                    <img src="./images/sql.svg" alt="SQL icon">
+                  </div>
+                  <div class="number">99%</div>
+                </div>
+              </div>
+              <p>SQL</p>
+            </div>
+
+            <div class="modal-overlay" id="sqlModal">
+              <div class="modal-content">
+                <button class="modal-close-btn" id="closeSqlModalBtn">&times;</button>
+
+                <div class="modal-header">
+                  <h3>SQL</h3>
+                </div>
+
+                <table class="modal-table">
+                  <thead>
+                    <tr>
+                      <th id='trad_skills_title_1'>Main Applications</th>
+                      <th id='trad_skills_title_2'>Functions, methods and resources used</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="sub_title">Data Querying and Manipulation</td>
+                      <td>Create <em>SELECT, INSERT, UPDATE,</em> and <em>DELETE</em> statements to manage relational
+                        databases.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Relational Data Modeling</td>
+                      <td>Define tables, primary/foreign keys, indexes, and constraints to maintain data integrity.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Analytical Querying</td>
+                      <td>Use joins, aggregations, and window functions to extract insights and generate reports.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Views and Stored Procedures</td>
+                      <td>Optimize query performance and standardize reusable analytical logic with views and stored
+                        procedures.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">BI & ETL Integration</td>
+                      <td>Connect seamlessly with tools such as <em>Power BI</em>, <em>Tableau</em>, and pipeline
+                        platforms.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- RSTUDIO (R) -->
+            <div id="skill-card-text">
+              <div class="skill-item skill-card rstudio" id="rstudioCard">
+                <img src="./images/icon_click.svg" alt="">
+                <div class="skill-inner">
+                  <div class="icon-box">
+                    <img src="./images/R.svg" alt="RStudio icon">
                   </div>
                   <div class="number">80%</div>
                 </div>
@@ -280,13 +431,59 @@
               <p>R Studio</p>
             </div>
 
-            <!-- Databricks -->
-            <div id="skill-card-text" onclick="openOverlay('Databricks')">
-              <div class="skill-item">
+            <div class="modal-overlay" id="rstudioModal">
+              <div class="modal-content">
+                <button class="modal-close-btn" id="closeRStudioModalBtn">&times;</button>
+
+                <div class="modal-header">
+                  <h3>R Studio</h3>
+                </div>
+
+                <table class="modal-table">
+                  <thead>
+                    <tr>
+                      <th id='trad_skills_title_1'>Main Applications</th>
+                      <th id='trad_skills_title_2'>Functions, methods and resources used</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="sub_title">Advanced Statistical Analysis</td>
+                      <td>Perform hypothesis testing, ANOVA, and regression analysis (linear, logistic, etc.).</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Predictive Modeling & ML</td>
+                      <td>Build and evaluate models using packages such as <em>caret</em>, <em>randomForest</em>, and
+                        <em>glmnet</em>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Data Visualization</td>
+                      <td>Create highly customizable and interactive plots with <em>ggplot2</em>, <em>plotly</em>, and
+                        <em>shiny</em>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Data Cleaning & Preparation</td>
+                      <td>Manipulate and prepare datasets using <em>dplyr</em>, <em>tidyr</em>, and <em>readr</em>.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Interactive Dashboards</td>
+                      <td>Build analytical web applications and dashboards with <em>Shiny Apps</em>.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+
+            <!-- DATABRICKS -->
+            <div id="skill-card-text">
+              <div class="skill-item skill-card databricks" id="databricksCard">
                 <img src="./images/icon_click.svg" alt="">
                 <div class="skill-inner">
                   <div class="icon-box">
-                    <img src="./images/databricks.svg" alt="">
+                    <img src="./images/databricks.svg" alt="Databricks icon">
                   </div>
                   <div class="number">95%</div>
                 </div>
@@ -294,27 +491,116 @@
               <p>Databricks</p>
             </div>
 
-            <!-- AWS -->
-            <div id="skill-card-text" onclick="openOverlay('Cloud AWS')">
-              <div class="skill-item">
+            <div class="modal-overlay" id="databricksModal">
+              <div class="modal-content">
+                <button class="modal-close-btn" id="closeDatabricksModalBtn">&times;</button>
+
+                <div class="modal-header">
+                  <h3>Databricks</h3>
+                </div>
+
+                <table class="modal-table">
+                  <thead>
+                    <tr>
+                      <th id='trad_skills_title_1'>Main Applications</th>
+                      <th id='trad_skills_title_2'>Functions, methods and resources used</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="sub_title">Collaborative Data Engineering & Science</td>
+                      <td>Use interactive notebooks with Python, SQL, R, and Scala in a unified, team-based environment.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">ETL and Large-Scale Processing</td>
+                      <td>Ingest and transform massive datasets using <em>Apache Spark</em> and <em>Delta Lake</em>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Machine Learning at Scale</td>
+                      <td>Train, track, and deploy ML models with <em>MLflow</em> and <em>AutoML</em> capabilities.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Cloud & Data Lake Integration</td>
+                      <td>Connect to <em>Azure</em>, <em>AWS</em>, and <em>GCP</em> for ingestion, governance, and
+                        management.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Orchestration and Monitoring</td>
+                      <td>Automate and monitor end-to-end data workflows from ingestion to deployment.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- AWS CLOUD -->
+            <div id="skill-card-text">
+              <div class="skill-item skill-card aws" id="awsCard">
                 <img src="./images/icon_click.svg" alt="">
                 <div class="skill-inner">
                   <div class="icon-box">
-                    <img src="./images/AWS.svg" alt="">
+                    <img src="./images/AWS.svg" alt="AWS icon">
                   </div>
-                  <div class="number">93%</div>
+                  <div class="number">91%</div>
                 </div>
               </div>
               <p>Cloud AWS</p>
             </div>
 
-            <!-- Tableau -->
-            <div id="skill-card-text" onclick="openOverlay('Tableau')">
-              <div class="skill-item">
+            <div class="modal-overlay" id="awsModal">
+              <div class="modal-content">
+                <button class="modal-close-btn" id="closeAwsModalBtn">&times;</button>
+
+                <div class="modal-header">
+                  <h3>Cloud AWS</h3>
+                </div>
+
+                <table class="modal-table">
+                  <thead>
+                    <tr>
+                      <th id='trad_skills_title_1'>Main Applications</th>
+                      <th id='trad_skills_title_2'>Functions, methods and resources used</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="sub_title">Data Storage and Management</td>
+                      <td>Use <em>Amazon S3</em>, <em>RDS</em>, and <em>Redshift</em> to store and query structured and
+                        unstructured data.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">ETL and Data Integration</td>
+                      <td>Build automated pipelines with <em>AWS Glue</em>, <em>Data Pipeline</em>, and <em>Lambda</em>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Machine Learning & AI</td>
+                      <td>Train and deploy ML models with <em>SageMaker</em> for scalable predictive analytics.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Infrastructure & Scalability</td>
+                      <td>Leverage <em>EC2</em>, <em>ECS</em>, and <em>EKS</em> to run analytical workloads at scale.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Monitoring & Security</td>
+                      <td>Manage logging, auditing, and access control through <em>CloudWatch</em> and <em>IAM</em>.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- TABLEAU -->
+            <div id="skill-card-text">
+              <div class="skill-item skill-card tableau" id="tableauCard">
                 <img src="./images/icon_click.svg" alt="">
                 <div class="skill-inner">
                   <div class="icon-box">
-                    <img src="./images/tableau.svg" alt="">
+                    <img src="./images/tableau.svg" alt="Tableau icon">
                   </div>
                   <div class="number">97%</div>
                 </div>
@@ -322,18 +608,105 @@
               <p>Tableau</p>
             </div>
 
-            <!-- Power BI -->
-            <div id="skill-card-text" onclick="openOverlay('Power BI')">
-              <div class="skill-item">
+            <div class="modal-overlay" id="tableauModal">
+              <div class="modal-content">
+                <button class="modal-close-btn" id="closeTableauModalBtn">&times;</button>
+
+                <div class="modal-header">
+                  <h3>Tableau</h3>
+                </div>
+
+                <table class="modal-table">
+                  <thead>
+                    <tr>
+                      <th id='trad_skills_title_1'>Main Applications</th>
+                      <th id='trad_skills_title_2'>Functions, methods and resources used</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="sub_title">Data Visualization & Analytics</td>
+                      <td>Build dynamic dashboards and reports with highly interactive visuals.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Data Connectivity</td>
+                      <td>Connect to SQL databases, spreadsheets, APIs, and cloud data warehouses.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Calculated Metrics & KPIs</td>
+                      <td>Use <em>Tableau Calculated Fields</em> for advanced metrics and business KPIs.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Data Storytelling</td>
+                      <td>Create executive dashboards and visual narratives for decision-making.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Publishing & Collaboration</td>
+                      <td>Share dashboards securely through <em>Tableau Server</em> or <em>Tableau Cloud</em>.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- POWER BI -->
+            <div id="skill-card-text">
+              <div class="skill-item skill-card powerbi" id="powerbiCard">
                 <img src="./images/icon_click.svg" alt="">
                 <div class="skill-inner">
                   <div class="icon-box">
-                    <img src="./images/PBI.svg" alt="">
+                    <img src="./images/PBI.svg" alt="Power BI icon">
                   </div>
-                  <div class="number">99%</div>
+                  <div class="number">98%</div>
                 </div>
               </div>
               <p>Power BI</p>
+            </div>
+
+            <div class="modal-overlay" id="powerbiModal">
+              <div class="modal-content">
+                <button class="modal-close-btn" id="closePowerBiModalBtn">&times;</button>
+
+                <div class="modal-header">
+                  <h3>Power BI</h3>
+                </div>
+
+                <table class="modal-table">
+                  <thead>
+                    <tr>
+                      <th id='trad_skills_title_1'>Main Applications</th>
+                      <th id='trad_skills_title_2'>Functions, methods and resources used</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="sub_title">Data Modeling</td>
+                      <td>Build robust data models by defining relationships (hierarchies and cardinalities) between
+                        multiple data tables.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Data Transformation & Cleansing (ETL)</td>
+                      <td>Use <em>Power Query (M Language)</em> to connect, extract, clean, and transform data before
+                        loading into the model.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Metric & KPI Calculation</td>
+                      <td>Create complex calculated columns and measures using <em>DAX (Data Analysis Expressions)</em>
+                        for business metrics (e.g., cumulative sales, market share).</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Dashboard Creation & Sharing</td>
+                      <td>Develop interactive reports and dashboards with a wide range of visuals and securely share
+                        them via <em>Power BI Service</em>.</td>
+                    </tr>
+                    <tr>
+                      <td class="sub_title">Business Performance Reporting</td>
+                      <td>Analyze sales, HR, finance, and operations performance, offering data exploration capabilities
+                        to end users.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -355,7 +728,15 @@
           </h3>
           <div class="entry">
             <div class="ajuste_experience">
-              <p style="font-weight: 500;" id="trad_time_exp_1">Apr 2024 - Present</p>
+              <p style="font-weight: 500;" id="trad_time_exp_5">Oct 2025 - Present</p>
+              <h3 id="trad_my_experience_5">Data Scientist Senior - Risk & Fraud</h3>
+              <p>Porto Alegre, Brazil</p>
+            </div>
+            <img src="images/logo_sicredi.svg" alt="">
+          </div>
+          <div class="entry">
+            <div class="ajuste_experience">
+              <p style="font-weight: 500;" id="trad_time_exp_1">Apr 2024 - Sep 2025</p>
               <h3 id="trad_my_experience_1">Data Scientist Mid - Risk & Fraud</h3>
               <p>Porto Alegre, Brazil</p>
             </div>
