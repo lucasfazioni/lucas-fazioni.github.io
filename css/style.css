@@ -5726,9 +5726,9 @@ input.check-toggle-round-flat:checked+label:after {
 @media (max-width: 990px) {
 	.switch {
 		position: fixed;
-		top: 10px;
+		top: 13px;
 		/* Ajustar conforme necessário */
-		right: 90px;
+		right: 55px;
 		/* Ajustar conforme necessário para posicionar ao lado dos três pontinhos */
 		z-index: 9998;
 		/* Colocar em primeiro plano */
@@ -10740,14 +10740,15 @@ html.tablet .ui-to-top {
 .rd-navbar-collapse-toggle span::before,
 .rd-navbar-collapse-toggle span::after {
 	position: absolute;
-	width: 5px;
+	width: 15px;
 	height: 5px;
 	line-height: 5px;
 	text-align: center;
 	background: #28334f;
 	left: 50%;
-	margin-left: -2.5px;
-	border-radius: 50%;
+	margin-left: -8px;
+	padding: 2px;
+	/* border-radius: 50%; */
 	transition: .3s all ease;
 }
 
@@ -11750,7 +11751,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-navbar-fixed-element-2 {
-	right: 46px;
+	right: 5px;
 }
 
 .rd-navbar-fixed.rd-navbar--is-clone {
