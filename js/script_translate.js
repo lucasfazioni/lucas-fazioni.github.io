@@ -45,8 +45,29 @@ const translations = {
 		trad_skills2: "Since the beginning of my journey with big data, I have acquired some skills. Below are some statistics that represent the level of understanding and utilization of the tools as a percentage.",
 
 		// Títulos de colunas de habilidades (usados em todos os modais de skills)
-		trad_skills_title_1: "Usability and Applications",
-		trad_skills_title_2: "Functions, methods and resources used",
+		modal_skills_title1_python: "Usability and Applications",
+		modal_skills_title2_python: "Functions, methods and resources used",
+
+		modal_skills_title1_spark: "Usability and Applications",
+		modal_skills_title2_spark: "Functions, methods and resources used",
+
+		modal_skills_title1_sql: "Usability and Applications",
+		modal_skills_title2_sql: "Functions, methods and resources used",
+
+		modal_skills_title1_r: "Usability and Applications",
+		modal_skills_title2_r: "Functions, methods and resources used",
+
+		modal_skills_title1_databricks: "Usability and Applications",
+		modal_skills_title2_databricks: "Functions, methods and resources used",
+
+		modal_skills_title1_aws: "Usability and Applications",
+		modal_skills_title2_aws: "Functions, methods and resources used",
+
+		modal_skills_title1_tableau: "Usability and Applications",
+		modal_skills_title2_tableau: "Functions, methods and resources used",
+
+		modal_skills_title1_pbi: "Usability and Applications",
+		modal_skills_title2_pbi: "Functions, methods and resources used",
 
 		// ===================================
 		// CONTEÚDO DOS MODAIS (Extraído dos anexos)
@@ -286,9 +307,29 @@ const translations = {
 		trad_skills2: "Desde o início da minha jornada com big data, adqueri algumas habilidades. Abaixo estão algumas estatísticas que representam o nível de entendimento e utilização das ferramentas percentualmente.",
 
 		// Títulos de colunas de habilidades (usados em todos os modais de skills)
-		trad_skills_title_1: "Usabilidade e Aplicações",
-		trad_skills_title_2: "Funções, métodos e recursos utilizados",
+		modal_skills_title1_python: "Usabilidade e Aplicações",
+		modal_skills_title2_python: "Funções, métodos e recursos utilizados",
 
+		modal_skills_title1_spark: "Usabilidade e Aplicações",
+		modal_skills_title2_spark: "Funções, métodos e recursos utilizados",
+
+		modal_skills_title1_sql: "Usabilidade e Aplicações",
+		modal_skills_title2_sql: "Funções, métodos e recursos utilizados",
+
+		modal_skills_title1_r: "Usabilidade e Aplicações",
+		modal_skills_title2_r: "Funções, métodos e recursos utilizados",
+
+		modal_skills_title1_databricks: "Usabilidade e Aplicações",
+		modal_skills_title2_databricks: "Funções, métodos e recursos utilizados",
+
+		modal_skills_title1_aws: "Usabilidade e Aplicações",
+		modal_skills_title2_aws: "Funções, métodos e recursos utilizados",
+
+		modal_skills_title1_tableau: "Usabilidade e Aplicações",
+		modal_skills_title2_tableau: "Funções, métodos e recursos utilizados",
+
+		modal_skills_title1_pbi: "Usabilidade e Aplicações",
+		modal_skills_title2_pbi: "Funções, métodos e recursos utilizados",
 		// ===================================
 		// CONTEÚDO DOS MODAIS (Extraído dos anexos)
 		// ===================================
@@ -496,6 +537,20 @@ function translateModalContent(lang) {
 	// Mapeamento de todas as chaves de tradução dos modais
 	// O JS itera sobre estas chaves e as traduz no elemento HTML correspondente (pelo ID)
 	const modalMaps = {
+		// titles
+		'modal_skills_title1_python': t.modal_skills_title1_python, 'modal_skills_title2_python': t.modal_skills_title2_python,
+		'modal_skills_title1_spark': t.modal_skills_title1_spark, 'modal_skills_title2_spark': t.modal_skills_title2_spark,
+		'modal_skills_title1_sql': t.modal_skills_title1_sql, 'modal_skills_title2_sql': t.modal_skills_title2_sql,
+		'modal_skills_title1_r': t.modal_skills_title1_r, 'modal_skills_title2_r': t.modal_skills_title2_r,
+		'modal_skills_title1_databricks': t.modal_skills_title1_databricks, 'modal_skills_title2_databricks': t.modal_skills_title2_databricks,
+		'modal_skills_title1_aws': t.modal_skills_title1_aws, 'modal_skills_title2_aws': t.modal_skills_title2_aws,
+		'modal_skills_title1_tableau': t.modal_skills_title1_tableau, 'modal_skills_title2_tableau': t.modal_skills_title2_tableau,
+		'modal_skills_title1_pbi': t.modal_skills_title1_pbi, 'modal_skills_title2_pbi': t.modal_skills_title2_pbi,
+
+		// ===================================
+		// CONTEÚDO DOS MODAIS
+		// ===================================
+
 		// Python
 		'modal_python_title': t.modal_python_title, 'modal_python_r1c1': t.modal_python_r1c1, 'modal_python_r1c2': t.modal_python_r1c2, 'modal_python_r2c1': t.modal_python_r2c1, 'modal_python_r2c2': t.modal_python_r2c2, 'modal_python_r3c1': t.modal_python_r3c1, 'modal_python_r3c2': t.modal_python_r3c2, 'modal_python_r4c1': t.modal_python_r4c1, 'modal_python_r4c2': t.modal_python_r4c2, 'modal_python_r5c1': t.modal_python_r5c1, 'modal_python_r5c2': t.modal_python_r5c2,
 		// PySpark (Spark)
@@ -573,10 +628,8 @@ function changeLanguage(lang) {
 	document.getElementById('trad_skills').textContent = t.trad_skills;
 	document.getElementById('trad_skills2').textContent = t.trad_skills2;
 
-	const title1 = document.getElementById('trad_skills_title_1');
-	const title2 = document.getElementById('trad_skills_title_2');
-	if (title1) title1.textContent = t.trad_skills_title_1;
-	if (title2) title2.textContent = t.trad_skills_title_2;
+	// document.getElementById('trad_skills_title_1').textContent = t.trad_skills_title_1;
+	// document.getElementById('trad_skills_title_2').textContent = t.trad_skills_title_2;
 
 	// =================================================================
 	// CHAVE DA SOLUÇÃO: CHAMA A TRADUÇÃO DOS MODAIS AQUI
