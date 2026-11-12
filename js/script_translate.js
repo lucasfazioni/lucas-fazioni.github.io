@@ -14,7 +14,7 @@ const translations = {
 		trad_banner1: "I am Lucas",
 		trad_banner2: "Data Scientist",
 		trad_banner3: "&",
-		trad_banner4: "Feature Engineer",
+		trad_banner4: "AI Engineer",
 		trad_banner5: "I solve complex problems that connect user experience with business security and risk, with solutions focused on Machine Learning and Artificial Intelligence.",
 
 		// setion 3: button download
